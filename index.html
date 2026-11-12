@@ -1,0 +1,1101 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="description" content="全国のお取り寄せグルメと、贈り物に喜ばれるギフトを正直に紹介する「お取り寄せギフト案内所 Japan Gifts」のホームページ。お歳暮・冬ギフト特集、予算と相手から探せるギフト検索、TikTok @socrateskun の案内。" />
+<link rel="icon" href="data:," />
+<title>お取り寄せギフト案内所 Japan Gifts｜お歳暮・お取り寄せグルメギフト</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --bg:#faf6ef;
+    --bg-soft:#f3ecdf;
+    --surface:#ffffff;
+    --surface-2:#fffaf1;
+    --ink:#2c1f16;
+    --ink-2:#5d4c3d;
+    --ink-3:#8a7663;
+    --line:#e5d9c6;
+    --crimson:#8c1d2f;
+    --crimson-deep:#6d1424;
+    --crimson-soft:#f7e8e4;
+    --gold:#a87c1f;
+    --gold-soft:#f4ead2;
+    --green:#3e6b4f;
+    --shadow:0 10px 30px rgba(80,50,20,.10);
+    --radius:16px;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#1d1611;
+      --bg-soft:#241b15;
+      --surface:#2a211a;
+      --surface-2:#332820;
+      --ink:#f3e9dc;
+      --ink-2:#cdbca6;
+      --ink-3:#a08b74;
+      --line:#453729;
+      --crimson:#e08a97;
+      --crimson-deep:#f0aab4;
+      --crimson-soft:#3d222a;
+      --gold:#d9ab4e;
+      --gold-soft:#3a2f18;
+      --green:#8fc7a5;
+      --shadow:0 10px 30px rgba(0,0,0,.35);
+    }
+  }
+  html{ scroll-behavior:smooth; }
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:"Zen Kaku Gothic New", system-ui, -apple-system, "Hiragino Kaku Gothic ProN", sans-serif;
+    font-size:16px; line-height:1.75; -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,p,ul,ol,figure{ margin:0; }
+  ul,ol{ padding:0; list-style:none; }
+  a{ color:inherit; }
+  img{ display:block; max-width:100%; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:0 20px; }
+
+  /* Header */
+  header.site{
+    position:sticky; top:0; z-index:50;
+    background:color-mix(in srgb, var(--bg) 92%, transparent);
+    backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .site-inner{ display:flex; align-items:center; gap:16px; padding:12px 0; }
+  .brand{ display:flex; align-items:center; gap:12px; text-decoration:none; min-width:0; }
+  .brand-mark{
+    width:42px; height:42px; flex:none; border-radius:10px;
+    background:var(--crimson); color:#fff;
+    display:grid; place-items:center;
+    font-family:"Shippori Mincho", serif; font-weight:800; font-size:20px;
+  }
+  @media (prefers-color-scheme: dark){ .brand-mark{ color:#241016; } }
+  .brand-text{ line-height:1.25; min-width:0; }
+  .brand-text strong{ display:block; font-family:"Shippori Mincho", serif; font-size:16px; font-weight:800; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  .brand-text span{ font-size:11px; color:var(--ink-3); letter-spacing:.14em; }
+  nav.main{ margin-left:auto; display:flex; gap:4px; flex-wrap:wrap; justify-content:flex-end; }
+  nav.main a{
+    text-decoration:none; font-size:13.5px; font-weight:700; color:var(--ink-2);
+    padding:8px 11px; border-radius:999px;
+  }
+  nav.main a:hover{ background:var(--bg-soft); color:var(--ink); }
+  nav.main a.cta{ background:var(--crimson); color:#fff; }
+  @media (prefers-color-scheme: dark){ nav.main a.cta{ color:#241016; } }
+  @media (max-width:760px){ nav.main a:not(.cta){ display:none; } }
+
+  /* Hero */
+  .hero{ padding:44px 0 8px; }
+  .hero-grid{ display:grid; grid-template-columns:1.05fr .95fr; gap:36px; align-items:center; }
+  @media (max-width:860px){ .hero-grid{ grid-template-columns:1fr; gap:24px; } }
+  .season-tag{
+    display:inline-flex; align-items:center; gap:8px;
+    background:var(--crimson-soft); color:var(--crimson);
+    font-size:13px; font-weight:900; padding:6px 14px; border-radius:999px; margin-bottom:18px;
+  }
+  .season-tag::before{ content:""; width:8px; height:8px; border-radius:50%; background:var(--crimson); }
+  h1{
+    font-family:"Shippori Mincho", serif; font-weight:800;
+    font-size:clamp(30px, 5.4vw, 46px); line-height:1.3; letter-spacing:.01em;
+  }
+  h1 .accent{ color:var(--crimson); }
+  .hero-sub{ margin-top:16px; color:var(--ink-2); font-size:16.5px; max-width:34em; }
+  .hero-sub .en{ display:block; font-size:13.5px; color:var(--ink-3); margin-top:6px; letter-spacing:.02em; }
+  .hero-actions{ display:flex; flex-wrap:wrap; gap:12px; margin-top:26px; }
+  .btn{
+    display:inline-flex; align-items:center; gap:8px; text-decoration:none;
+    font-weight:900; font-size:15px; padding:13px 22px; border-radius:999px;
+    border:1px solid transparent; cursor:pointer; transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .btn:hover{ transform:translateY(-1px); }
+  .btn-primary{ background:var(--crimson); color:#fff; box-shadow:0 8px 20px rgba(140,29,47,.25); }
+  @media (prefers-color-scheme: dark){ .btn-primary{ color:#241016; } }
+  .btn-ghost{ background:var(--surface); border-color:var(--line); color:var(--ink); }
+  .hero-points{ display:flex; flex-wrap:wrap; gap:8px 18px; margin-top:22px; font-size:13.5px; color:var(--ink-2); font-weight:700; }
+  .hero-points li{ display:flex; align-items:center; gap:7px; }
+  .hero-points li::before{ content:"✓"; color:var(--green); font-weight:900; }
+  .hero-photo{ position:relative; }
+  .hero-photo img{ width:100%; height:100%; min-height:300px; object-fit:cover; border-radius:20px; box-shadow:var(--shadow); }
+  .hero-photo figcaption{
+    position:absolute; left:14px; bottom:14px;
+    background:rgba(30,18,10,.78); color:#fdf6ea; font-size:12.5px; font-weight:700;
+    padding:7px 13px; border-radius:999px; backdrop-filter:blur(4px);
+  }
+
+  .pr-bar{
+    margin-top:34px; background:var(--surface); border:1px solid var(--line); border-radius:12px;
+    padding:12px 18px; font-size:13px; color:var(--ink-2);
+    display:flex; gap:10px; align-items:flex-start;
+  }
+  .pr-bar b{ color:var(--crimson); flex:none; border:1.5px solid var(--crimson); border-radius:6px; padding:0 7px; font-size:12px; line-height:1.9; }
+
+  /* Sections */
+  section.block{ padding:56px 0 8px; }
+  .sec-head{ display:flex; align-items:baseline; gap:14px; flex-wrap:wrap; margin-bottom:8px; }
+  .sec-head h2{ font-family:"Shippori Mincho", serif; font-size:clamp(23px,3.6vw,30px); font-weight:800; }
+  .sec-head .en{ font-size:12px; letter-spacing:.18em; color:var(--gold); font-weight:900; }
+  .sec-lead{ color:var(--ink-2); max-width:44em; margin-bottom:26px; }
+
+  /* Pickup cards */
+  .pick-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:18px; }
+  @media (max-width:760px){ .pick-grid{ grid-template-columns:1fr; } }
+  .pick-grid .cat-card .ph{ aspect-ratio:16/10; }
+  .pick-grid .pick-full{ grid-column:1 / -1; }
+  @media (min-width:761px){
+    .pick-grid .pick-full{ flex-direction:row; }
+    .pick-grid .pick-full .ph{ flex:0 0 42%; aspect-ratio:auto; }
+  }
+  .rating{ font-size:13px; font-weight:900; color:var(--gold); }
+  .rating span{ color:var(--ink-3); font-weight:700; }
+
+  /* Category cards */
+  .cat-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+  @media (max-width:900px){ .cat-grid{ grid-template-columns:repeat(2,1fr); } }
+  @media (max-width:560px){ .cat-grid{ grid-template-columns:1fr; } }
+  .cat-card{ background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); overflow:hidden; display:flex; flex-direction:column; }
+  .cat-card .ph{ aspect-ratio:4/3; overflow:hidden; background:var(--bg-soft); }
+  .cat-card .ph img{ width:100%; height:100%; object-fit:cover; }
+  .cat-card .ph.text-ph{ display:grid; place-items:center; background:var(--crimson); }
+  .ph-kanazawa{ text-align:center; color:#fdf3d8; padding:20px; }
+  .ph-kanazawa .big{ font-family:"Shippori Mincho", serif; font-size:34px; font-weight:800; display:block; line-height:1.3; }
+  .ph-kanazawa .small{ font-size:12.5px; letter-spacing:.2em; opacity:.85; }
+  .cat-body{ padding:18px 18px 20px; display:flex; flex-direction:column; gap:8px; flex:1; }
+  .cat-body h3{ font-size:18px; font-weight:900; }
+  .cat-body h3 .sub{ display:block; font-size:12px; color:var(--ink-3); font-weight:700; letter-spacing:.06em; margin-top:2px; }
+  .cat-body p{ font-size:14px; color:var(--ink-2); flex:1; }
+  .cat-meta{ display:flex; gap:6px; flex-wrap:wrap; }
+  .chip{ font-size:11.5px; font-weight:700; background:var(--gold-soft); color:var(--gold); padding:3px 10px; border-radius:999px; }
+  .chip.red{ background:var(--crimson-soft); color:var(--crimson); }
+  .shop-links{ display:grid; grid-template-columns:1fr; gap:8px; margin-top:6px; }
+  .shop-links a{
+    text-align:center; text-decoration:none; font-weight:900; font-size:13.5px;
+    padding:10px 6px; border-radius:10px; border:1px solid var(--line); background:var(--surface-2); color:var(--ink);
+  }
+  .shop-links a:hover{ border-color:var(--gold); }
+  .shop-links a .mall{ display:block; font-size:11px; color:var(--ink-3); font-weight:700; }
+  .pr-note{ font-size:11px; color:var(--ink-3); }
+
+  /* Owner pick */
+  .owner-card{
+    background:var(--surface); border:1px solid var(--line); border-radius:20px; overflow:hidden;
+    box-shadow:var(--shadow); display:grid; grid-template-columns:1fr 1.1fr;
+  }
+  @media (max-width:860px){ .owner-card{ grid-template-columns:1fr; } }
+  .owner-card .ph{ min-height:280px; background:var(--bg-soft); }
+  .owner-card .ph img{ width:100%; height:100%; object-fit:cover; }
+  @media (max-width:860px){ .owner-card .ph img{ aspect-ratio:16/10; } }
+  .owner-body{ padding:28px 30px 30px; display:flex; flex-direction:column; gap:12px; }
+  @media (max-width:560px){ .owner-body{ padding:22px 20px 24px; } }
+  .owner-body h3{ font-family:"Shippori Mincho", serif; font-size:clamp(21px,3vw,26px); font-weight:800; line-height:1.45; }
+  .owner-body h3 .sub{ display:block; font-family:"Zen Kaku Gothic New", sans-serif; font-size:13px; color:var(--ink-3); font-weight:700; letter-spacing:.04em; margin-top:4px; }
+  .owner-body p{ font-size:14.5px; color:var(--ink-2); }
+  .owner-body p b{ color:var(--ink); }
+  .owner-quote{
+    background:var(--surface-2); border-radius:12px; padding:14px 16px;
+    font-family:"Shippori Mincho", serif; font-weight:700; font-size:16px; color:var(--ink); line-height:1.6;
+  }
+  .owner-quote span{ display:block; font-family:"Zen Kaku Gothic New", sans-serif; font-size:12px; font-weight:700; color:var(--ink-3); margin-top:5px; }
+  .owner-spec{ display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+  @media (max-width:480px){ .owner-spec{ grid-template-columns:1fr; } }
+  .owner-spec div{ background:var(--bg-soft); border-radius:10px; padding:11px 14px; }
+  .owner-spec dt{ font-size:11.5px; font-weight:900; color:var(--ink-3); letter-spacing:.06em; }
+  .owner-spec dd{ margin:0; font-size:15px; font-weight:900; }
+  .owner-actions{ display:flex; flex-wrap:wrap; gap:10px; margin-top:4px; }
+  .owner-actions .btn{ flex:1; min-width:210px; justify-content:center; text-align:center; }
+  .btn-map{ background:var(--surface); border-color:var(--line); color:var(--ink); }
+
+  /* Concierge */
+  .concierge{
+    background:var(--surface); border:1px solid var(--line); border-radius:20px; padding:28px;
+    box-shadow:var(--shadow);
+  }
+  @media (max-width:560px){ .concierge{ padding:20px; } }
+  .concierge h3{ font-family:"Shippori Mincho", serif; font-size:21px; font-weight:800; margin-bottom:6px; }
+  .concierge>p{ color:var(--ink-2); font-size:14.5px; margin-bottom:20px; }
+  .c-form{ display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+  @media (max-width:760px){ .c-form{ grid-template-columns:1fr; } }
+  .c-field label{ display:block; font-size:13px; font-weight:900; margin-bottom:7px; }
+  .c-field select{
+    width:100%; font:inherit; font-size:15px; padding:12px 14px; border-radius:10px;
+    border:1px solid var(--line); background:var(--surface-2); color:var(--ink);
+  }
+  .c-result{ margin-top:20px; border-top:1px dashed var(--line); padding-top:18px; display:none; }
+  .c-result.show{ display:block; }
+  .c-result .kw{ font-size:14px; color:var(--ink-2); margin-bottom:12px; }
+  .c-result .kw b{ color:var(--ink); }
+  .c-actions{ display:flex; flex-wrap:wrap; gap:10px; }
+  .c-actions a{ flex:1; min-width:200px; text-align:center; }
+  .btn-rakuten{ background:#bf0000; color:#fff; }
+  .c-tip{ margin-top:14px; font-size:13.5px; color:var(--ink-2); background:var(--bg-soft); border-radius:10px; padding:12px 14px; }
+
+  /* Budget */
+  .budget-tabs{ display:flex; gap:8px; flex-wrap:wrap; margin-bottom:20px; }
+  .budget-tabs button{
+    font:inherit; font-weight:900; font-size:14px; cursor:pointer;
+    padding:9px 18px; border-radius:999px; border:1px solid var(--line);
+    background:var(--surface); color:var(--ink-2);
+  }
+  .budget-tabs button.active{ background:var(--crimson); border-color:var(--crimson); color:#fff; }
+  @media (prefers-color-scheme: dark){ .budget-tabs button.active{ color:#241016; } }
+  .idea-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+  @media (max-width:900px){ .idea-grid{ grid-template-columns:repeat(2,1fr); } }
+  @media (max-width:560px){ .idea-grid{ grid-template-columns:1fr; } }
+  .idea{ background:var(--surface); border:1px solid var(--line); border-radius:14px; padding:18px; display:flex; flex-direction:column; gap:8px; }
+  .idea.hide{ display:none; }
+  .idea .price{ font-family:"Shippori Mincho", serif; font-weight:800; color:var(--crimson); font-size:15px; }
+  .idea h3{ font-size:16.5px; font-weight:900; }
+  .idea p{ font-size:13.5px; color:var(--ink-2); flex:1; }
+  .idea .shop-links{ margin-top:2px; }
+
+  /* Scenes */
+  .scene-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:16px; }
+  @media (max-width:900px){ .scene-grid{ grid-template-columns:repeat(2,1fr); } }
+  @media (max-width:480px){ .scene-grid{ grid-template-columns:1fr; } }
+  .scene{ background:var(--surface-2); border:1px solid var(--line); border-radius:14px; padding:20px 18px; }
+  .scene .when{ font-size:12px; font-weight:900; color:var(--gold); letter-spacing:.08em; }
+  .scene h3{ font-size:17px; font-weight:900; margin:4px 0 8px; }
+  .scene p{ font-size:13.5px; color:var(--ink-2); }
+
+  /* Steps */
+  .steps{ display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+  @media (max-width:760px){ .steps{ grid-template-columns:1fr; } }
+  .step{ background:var(--surface); border:1px solid var(--line); border-radius:14px; padding:22px 20px; }
+  .step .num{
+    width:34px; height:34px; border-radius:50%; background:var(--gold-soft); color:var(--gold);
+    display:grid; place-items:center; font-family:"Shippori Mincho", serif; font-weight:800; margin-bottom:12px;
+  }
+  .step h3{ font-size:16.5px; font-weight:900; margin-bottom:6px; }
+  .step p{ font-size:14px; color:var(--ink-2); }
+  .checklist{ margin-top:18px; background:var(--surface); border:1px solid var(--line); border-radius:14px; padding:20px 22px; }
+  .checklist h3{ font-size:15.5px; font-weight:900; margin-bottom:10px; }
+  .checklist ul{ display:grid; grid-template-columns:1fr 1fr; gap:8px 24px; }
+  @media (max-width:640px){ .checklist ul{ grid-template-columns:1fr; } }
+  .checklist li{ font-size:14px; color:var(--ink-2); padding-left:26px; position:relative; }
+  .checklist li::before{
+    content:"✓"; position:absolute; left:0; top:1px; width:18px; height:18px; border-radius:5px;
+    background:var(--green); color:#fff; font-size:12px; font-weight:900; display:grid; place-items:center; line-height:1;
+  }
+
+  /* TikTok */
+  .tiktok-band{
+    background:var(--crimson-deep); color:#fdf3e3; border-radius:20px; padding:34px 30px;
+    display:grid; grid-template-columns:1.2fr .8fr; gap:26px; align-items:center;
+  }
+  @media (max-width:760px){ .tiktok-band{ grid-template-columns:1fr; padding:26px 22px; } }
+  .tiktok-band h2{ font-family:"Shippori Mincho", serif; font-size:clamp(21px,3.4vw,27px); font-weight:800; color:#fff; margin-bottom:10px; }
+  .tiktok-band p{ font-size:14.5px; color:#f3ddc8; max-width:36em; }
+  .tiktok-card{ background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.22); border-radius:14px; padding:20px; }
+  .tiktok-card .handle{ font-size:20px; font-weight:900; color:#fff; }
+  .tiktok-card .name{ font-size:13px; color:#f3ddc8; margin-bottom:14px; }
+  .tiktok-card a{
+    display:block; text-align:center; background:#fff; color:#6d1424; font-weight:900; text-decoration:none;
+    padding:12px; border-radius:10px; font-size:15px;
+  }
+  .tiktok-card .goal{ font-size:12.5px; color:#f3ddc8; margin-top:12px; text-align:center; }
+
+  /* FAQ */
+  .faq{ display:flex; flex-direction:column; gap:10px; }
+  .faq details{ background:var(--surface); border:1px solid var(--line); border-radius:12px; }
+  .faq summary{ cursor:pointer; font-weight:900; font-size:15.5px; padding:16px 20px; list-style:none; display:flex; justify-content:space-between; gap:12px; align-items:center; }
+  .faq summary::-webkit-details-marker{ display:none; }
+  .faq summary::after{ content:"＋"; color:var(--crimson); font-weight:900; flex:none; }
+  .faq details[open ] summary::after{ content:"−"; }
+  .faq .a{ padding:0 20px 18px; font-size:14.5px; color:var(--ink-2); }
+
+  /* Policy / footer */
+  .policy{ background:var(--bg-soft); border-radius:16px; padding:24px 26px; font-size:14px; color:var(--ink-2); }
+  .policy h3{ color:var(--ink); font-size:16px; font-weight:900; margin-bottom:10px; }
+  .policy ul{ display:flex; flex-direction:column; gap:6px; }
+  .policy li{ padding-left:18px; position:relative; }
+  .policy li::before{ content:"・"; position:absolute; left:2px; color:var(--gold); font-weight:900; }
+  footer.site{ margin-top:64px; border-top:1px solid var(--line); padding:28px 0 40px; }
+  .foot{ display:flex; flex-wrap:wrap; gap:14px 28px; align-items:center; justify-content:space-between; font-size:13px; color:var(--ink-3); }
+  .foot a{ font-weight:700; }
+  .updated{ font-size:12px; }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap site-inner">
+    <a class="brand" href="#top" aria-label="お取り寄せギフト案内所 Japan Gifts トップへ">
+      <span class="brand-mark" aria-hidden="true">贈</span>
+      <span class="brand-text">
+        <strong>お取り寄せギフト案内所</strong>
+        <span>JAPAN GIFTS</span>
+      </span>
+    </a>
+    <nav class="main" aria-label="ページ内メニュー">
+      <a href="#owner-pick">店主のおすすめ</a>
+      <a href="#pickup">新着ピックアップ</a>
+      <a href="#categories">カテゴリ</a>
+      <a href="#concierge">ギフト検索</a>
+      <a href="#budget">予算で選ぶ</a>
+      <a href="#howto">選び方</a>
+      <a href="#faq">よくある質問</a>
+      <a class="cta" href="https://www.tiktok.com/@socrateskun" target="_blank" rel="noopener">TikTokを見る</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <!-- Hero -->
+  <div class="hero">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div>
+          <span class="season-tag">お歳暮・冬ギフト特集 開催中</span>
+          <h1>全国のお取り寄せグルメを、<br /><span class="accent">贈って喜ばれる</span>一品に。</h1>
+          <p class="hero-sub">
+            全国のお取り寄せグルメと、贈り物に喜ばれるギフトを正直に紹介します。誇大な表現はせず、良いところも注意点もそのままに。まずは今の季節に間に合う、お歳暮・冬ギフトからどうぞ。
+            <span class="en">Japanese gourmet gifts, honestly reviewed.</span>
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#concierge">予算と相手から探す</a>
+            <a class="btn btn-ghost" href="https://www.tiktok.com/@socrateskun" target="_blank" rel="noopener">TikTok @socrateskun</a>
+          </div>
+          <ul class="hero-points">
+            <li>PR投稿は必ず明記</li>
+            <li>実物・販売元の情報を確認して紹介</li>
+            <li>価格はリンク先で最新を確認</li>
+          </ul>
+        </div>
+        <figure class="hero-photo">
+          <img src="hero.jpg" alt="風呂敷で包んだ贈り物の箱が木のテーブルに並んでいる様子" />
+          <figcaption>贈り物は、包みを開ける前から始まっています</figcaption>
+        </figure>
+      </div>
+
+      <div class="pr-bar">
+        <b>PR</b>
+        <p>このページには楽天アフィリエイトの広告が含まれます。リンク先（楽天市場）で商品を購入されると、運営者に紹介料が入る場合があります。価格や在庫は変動するため、購入前にリンク先の表示をご確認ください。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Owner pick: Narimasu Farm -->
+  <section class="block" id="owner-pick">
+    <div class="wrap">
+      <div class="sec-head"><h2>店主が毎年買っている品</h2><span class="en">OWNER'S PICK</span></div>
+      <p class="sec-lead">宣伝のために選んだ品ではありません。店主が実際に毎年買っていて、今年も購入した品を、そのまま紹介します。今回は長野県長野市の成増農園です。</p>
+
+      <article class="owner-card">
+        <div class="ph"><img src="narimasu-apple.jpg" alt="長野の山々を背景に実る信州りんごの果樹園" loading="lazy" /></div>
+        <div class="owner-body">
+          <div class="cat-meta">
+            <span class="chip red">店主リピート</span>
+            <span class="chip">長野県長野市・成増農園</span>
+            <span class="chip">ふるさと納税 返礼品</span>
+          </div>
+          <h3>成増農園 信州育ちのりんごストレートジュース 1000ml×3本<span class="sub">楽天ふるさと納税（長野市）／ 成増農園</span></h3>
+          <p>産地直送のりんごで、店主が毎年買っている長野市の農園・<b>成増農園</b>。その成増農園のりんごジュースが、楽天ふるさと納税の返礼品になっています。<b>今年も店主が購入しました。</b></p>
+          <p class="owner-quote">「アフィリエイト宣伝しなくても、本当に良い品は売れるんです」<span>— 店主のひとこと</span></p>
+          <dl class="owner-spec">
+            <div><dt>内容</dt><dd>りんごストレートジュース 1000ml×3本</dd></div>
+            <div><dt>寄附額の目安</dt><dd>15,000円（楽天ふるさと納税）</dd></div>
+          </dl>
+          <div class="owner-actions">
+            <a class="btn btn-primary" href="https://a.r10.to/hFaHwq" target="_blank" rel="noopener sponsored">楽天ふるさと納税で見る（PR）</a>
+            <a class="btn btn-map" href="https://maps.app.goo.gl/NGV9CF66H7x9kSM68?g_st=ic" target="_blank" rel="noopener">農園の場所を地図で見る</a>
+          </div>
+          <span class="pr-note">※ 「楽天ふるさと納税で見る」は楽天アフィリエイトリンクです。寄附額・内容・受付状況は変動するため、リンク先の表示をご確認ください。写真は信州のりんご畑のイメージです（成増農園の写真ではありません）。</span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- New pickup: furusato favourites -->
+  <section class="block" id="pickup">
+    <div class="wrap">
+      <div class="sec-head"><h2>新着ピックアップ</h2><span class="en">NEW PICKUP</span></div>
+      <p class="sec-lead">ふるさと納税で評判の品を新たに3品追加し、全12品を紹介します。ふるさと納税の返礼品と楽天市場のお取り寄せを合わせて、年末の駆け込み寄附や、ご自宅用のお取り寄せにも向く品です。内容量や寄附額はリンク先で最新をご確認ください。</p>
+
+      <div class="pick-grid">
+        <article class="cat-card">
+          <div class="ph"><img src="mikan.jpg" alt="段ボール箱に詰めた有田みかん" loading="lazy" /></div>
+          <div class="cat-body">
+            <div class="cat-meta">
+              <span class="chip red">ふるさと納税</span>
+              <span class="chip">和歌山県・有田市</span>
+              <span class="chip">訳あり・家庭用</span>
+              <span class="chip">寄附額 8,000円〜</span>
+            </div>
+            <h3>有田みかん「風のしるし」5kg／10kg<span class="sub">楽天ふるさと納税（和歌山県有田市）</span></h3>
+            <p class="rating">★4.41 <span>（レビュー899件・2026年11月12日確認時点）</span></p>
+            <p>和歌山県有田市の返礼品の温州みかんです（以下は商品ページの案内をもとにした紹介です）。内容量は約5kgまたは10kg×1箱（サイズS・M・L）から選べます。賞味期限は2週間程度が目安です。送料無料です。</p>
+            <p>注意点も正直に：皮に傷がついた家庭用の訳ありみかんです（味は有田みかん本来のものと商品ページに記載されています）。のし対応・ギフト対応はできないため、贈り物用ではなく、自宅用・お試し用として紹介します。寄附額の詳細はリンク先でご確認ください。</p>
+            <div class="shop-links">
+              <a href="https://hb.afl.rakuten.co.jp/ichiba/5941b8f4.9742d675.5941b8f5.2abfda65/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff302040-arida%2F0241%2F" target="_blank" rel="noopener sponsored">楽天ふるさと納税で見る（PR）<span class="mall">和歌山県有田市・有田みかん「風のしるし」</span></a>
+            </div>
+            <span class="pr-note">※ 広告リンク（楽天アフィリエイト）です。寄附額・内容量・受付状況はリンク先でご確認ください。写真は有田みかんのイメージです（返礼品そのものの写真ではありません）。</span>
+          </div>
+        </article>
+
+        <article class="cat-card">
+          <div class="ph"><img src="zuwai-crab.jpg" alt="皿に盛り付けた生ずわいがにの棒肉ポーション" loading="lazy" /></div>
+          <div class="cat-body">
+            <div class="cat-meta">
+              <span class="chip red">ふるさと納税</span>
+              <span class="chip">宮城県・気仙沼市</span>
+              <span class="chip">冷凍・生むき身</span>
+              <span class="chip">寄附額 16,000円〜</span>
+            </div>
+            <h3>生本ずわいがに 棒肉ポーション 約500g／約1kg<span class="sub">楽天ふるさと納税（宮城県気仙沼市）／ カネダイ</span></h3>
+            <p class="rating">★4.52 <span>（レビュー2,035件・2026年11月12日確認時点）</span></p>
+            <p>宮城県気仙沼市の返礼品で、カネダイの生本ずわいがに棒肉ポーションです（以下は商品ページの案内をもとにした紹介です）。殻むき不要の生のむき身で、かにしゃぶ・刺身・天ぷら・バター焼きに使えると案内されています。内容量は約500g（正味約380g・20本〜30本）／約1kg（正味約760g・40本〜60本）から選べ、賞味期限は出荷から3か月（要冷凍）です。発送月を選ぶことができ、12月10日決済完了分まで年内発送と案内されています。</p>
+            <p>注意点も正直に：寄附額は約500gが16,000円、約1kgが28,000円です。詳細はリンク先でご確認ください。</p>
+            <div class="shop-links">
+              <a href="https://hb.afl.rakuten.co.jp/ichiba/5941b8f4.9742d675.5941b8f5.2abfda65/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff042056-kesennuma%2F20560540%2F" target="_blank" rel="noopener sponsored">楽天ふるさと納税で見る（PR）<span class="mall">宮城県気仙沼市・生本ずわいがに棒肉ポーション</span></a>
+            </div>
+            <span class="pr-note">※ 広告リンク（楽天アフィリエイト）です。寄附額・内容量・受付状況はリンク先でご確認ください。写真は生ずわいがにポーションのイメージです（返礼品そのものの写真ではありません）。</span>
+          </div>
+        </article>
+
+        <article class="cat-card">
+          <div class="ph"><img src="ham-gift.jpg" alt="日本ハム「本格派」ハム・ウインナーのギフト詰め合わせ" loading="lazy" /></div>
+          <div class="cat-body">
+            <div class="cat-meta">
+              <span class="chip red">楽天市場</span>
+              <span class="chip">日本ハム・本格派</span>
+              <span class="chip">冷蔵便</span>
+              <span class="chip">早割 2,540円〜3,380円</span>
+            </div>
+            <h3>日本ハム 選べる本格派ギフト NH-37／NH-52<span class="sub">楽天市場（ギフト&amp;グルメ北海道）</span></h3>
+            <p class="rating">★4.49 <span>（レビュー4,192件・2026年11月12日確認時点）</span></p>
+            <p>お歳暮の定番、日本ハム「本格派」のハム詰め合わせです（以下は商品ページの案内をもとにした紹介です）。NH-37は5種詰合せ（パストラミローフ128g、ロース生ハム27g、スモークボロニア105g、特撰あらびきウインナー66g、特撰ホワイトウインナー66g）で賞味期間60日、NH-52は6種詰合せ（ホワイトロースハム160g、ペッパーボロニア105g、焼豚140g、ロース生ハム27g、特撰あらびきウインナー66g、あらびきミートローフ128g）で賞味期間50日。冷蔵便で届きます。</p>
+            <p>注意点も正直に：価格は2026年11月12日時点の早割価格で、NH-37が2,540円、NH-52が3,380円です（早割は12月1日11:59まで）。送料無料ですが、離島・沖縄は別途送料の場合があります。早割終了後は価格が変わるため、詳細はリンク先でご確認ください。</p>
+            <div class="shop-links">
+              <a href="https://hb.afl.rakuten.co.jp/ichiba/5941b8f4.9742d675.5941b8f5.2abfda65/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fhokkaido-gourmation%2F1506-93%2F" target="_blank" rel="noopener sponsored">楽天市場で見る（PR）<span class="mall">ギフト&amp;グルメ北海道・日本ハム本格派ギフト</span></a>
+            </div>
+            <span class="pr-note">※ 広告リンク（楽天アフィリエイト）です。価格・内容・送料はリンク先でご確認ください。写真は日本ハム「本格派」ギフトのイメージです（商品そのものの写真ではありません）。</span>
+          </div>
+        </article>
+
+        <article class="cat-card">
+          <div class="ph"><img src="salmon.jpg" alt="大葉とつまを添えたサーモンのお刺身" loading="lazy" /></div>
+          <div class="cat-body">
+            <div class="cat-meta">
+              <span class="chip red">ふるさと納税</span>
+              <span class="chip">北海道・白糠町</span>
+              <span class="chip">冷凍・生食可</span>
+            </div>
+            <h3>エンペラーサーモン／アトランティックサーモン<span class="sub">楽天ふるさと納税（北海道白糠町）</span></h3>
+            <p class="rating">★4.70 <span>（レビュー8,567件・楽天ふるさと納税ページ表示）</span></p>
+            <p>脂のりが特徴のアトランティックサーモンを、白糠町で小骨を取り除いて小分け加工した返礼品。お刺身はもちろん、カルパッチョやレアステーキにも。エンペラーサーモンは400g〜1.6kg、アトランティックサーモンは600g〜1.6kgから内容量が選べ、「訳あり」タイプもあります。訳ありは身割れや形のばらつき等が理由で、味は通常品と変わらないと案内されています。</p>
+            <p>注意点も正直に：着日の指定はできません。小骨は取り除かれていますが、まれに残る場合があると明記されています。解凍は冷蔵庫で8〜10時間ほどが目安です。</p>
+            <div class="shop-links">
+              <a href="https://a.r10.to/hPlkcs" target="_blank" rel="noopener sponsored">楽天ふるさと納税で見る（PR）<span class="mall">北海道白糠町・エンペラーサーモン</span></a>
+            </div>
+            <span class="pr-note">※ 広告リンク（楽天アフィリエイト）です。寄附額・内容量・受付状況はリンク先でご確認ください。写真はサーモンのお刺身のイメージです（返礼品そのものの写真ではありません）。</span>
+          </div>
+        </article>
+
+        <article class="cat-card">
+          <div class="ph"><img src="gyutan.jpg" alt="厚切りに焼き上げた牛タンの盛り付け" loading="lazy" /></div>
+          <div class="cat-body">
+            <div class="cat-meta">
+              <span class="chip red">ふるさと納税</span>
+              <span class="chip">岩手県・花巻市</span>
+              <span class="chip">冷凍・味付け済み</span>
+            </div>
+            <h3>厚切り牛タン 塩味（約10mm）<span class="sub">楽天ふるさと納税（岩手県花巻市）</span></h3>
+            <p class="rating">★4.49 <span>（レビュー13,837件・楽天ふるさと納税ページ表示）</span></p>
+            <p>厚さ約10mmにカットし、塩味で味付けした牛タン。解凍して焼くだけで、焼肉やBBQの主役になります。内容量は500g、または1kg（500g×2パック）から選べ、1kgには3か月定期便もあります。1kgは発送時期が選べるスピード発送対応の案内があります。</p>
+            <p>注意点も正直に：原材料の牛タンは輸入牛（アイルランド産・ウルグアイ産など）で、花巻市内の工場でスライス・味付け加工された返礼品です。「国産」ではありません。配送日の指定は承っていないと明記されています。</p>
+            <div class="shop-links">
+              <a href="https://a.r10.to/hPzBKg" target="_blank" rel="noopener sponsored">楽天ふるさと納税で見る（PR）<span class="mall">岩手県花巻市・厚切り牛タン</span></a>
+            </div>
+            <span class="pr-note">※ 広告リンク（楽天アフィリエイト）です。寄附額・内容量・発送時期はリンク先でご確認ください。写真は厚切り牛タンのイメージです（返礼品そのものの写真ではありません）。</span>
+          </div>
+        </article>
+
+        <article class="cat-card pick-full">
+          <div class="ph"><img src="rice.jpg" alt="茶碗に盛った炊きたての白米ご飯" loading="lazy" /></div>
+          <div class="cat-body">
+            <div class="cat-meta">
+              <span class="chip red">ふるさと納税</span>
+              <span class="chip">熊本県・氷川町</span>
+              <span class="chip">無洗米・定期便あり</span>
+            </div>
+            <h3>ひごみのり／ひのひかり 無洗米・白米（熊本県産）<span class="sub">楽天ふるさと納税（熊本県氷川町）</span></h3>
+            <p class="rating">★4.81 <span>（レビュー158件・楽天ふるさと納税ページ表示）</span></p>
+            <p>熊本県氷川町の返礼品のお米。氷川町オリジナルのブレンド米「ひごみのり」や、ひのひかり（令和8年産）などから選べ、精米方法は白米・無洗米の2通り。内容量は5kg・10kg・20kg（いずれも5kg袋の小分け）で、3か月・6か月・12か月の定期便もあります。最短当日出荷の案内があり、出荷時期も選べます。</p>
+            <p>注意点も正直に：この返礼品は令和8年熊本地震の復興支援クラウドファンディング対象で、寄附金は氷川町の復興支援プロジェクトに使われます。「ひごみのり」は複数原料米（ブレンド米）で、単一銘柄米ではありません。また、寄附申込み後のキャンセルや返礼品の変更・返品はできないと明記されています。</p>
+            <div class="shop-links">
+              <a href="https://a.r10.to/hYPooH" target="_blank" rel="noopener sponsored">楽天ふるさと納税で見る（PR）<span class="mall">熊本県氷川町・ひごみのり／ひのひかり</span></a>
+            </div>
+            <span class="pr-note">※ 広告リンク（楽天アフィリエイト）です。寄附額・内容量・受付状況はリンク先でご確認ください。写真は炊きたての白米ご飯のイメージです（返礼品そのものの写真ではありません）。</span>
+          </div>
+        </article>
+
+        <article class="cat-card">
+          <div class="ph"><img src="muscat.jpg" alt="箱に詰めたシャインマスカットの房" loading="lazy" /></div>
+          <div class="cat-body">
+            <div class="cat-meta">
+              <span class="chip red">ふるさと納税</span>
+              <span class="chip">山梨県・富士吉田市</span>
+              <span class="chip">冷蔵・クール便</span>
+              <span class="chip">寄附額 8,800円〜30,000円</span>
+            </div>
+            <h3>シャインマスカット（山梨県産）<span class="sub">楽天ふるさと納税（山梨県富士吉田市）</span></h3>
+            <p class="rating">★4.33 <span>（レビュー3,504件・2026年11月10日確認時点）</span></p>
+            <p>種がなく皮ごと食べられる、山梨県産シャインマスカットの返礼品です（以下は商品ページの案内をもとにした紹介です）。容量は500g・1kg・1.2kg・1.5kg・2kg・3kgから選べ、冷蔵・クール便で届きます。発送は2026年分（8月下旬〜11月中旬）と、2027年先行予約分があります。送料無料です。</p>
+            <p>注意点も正直に：生鮮品のため、届いたらお早めにお召し上がりください（賞味期限の日数表示は商品ページにありません）。寄附額は容量によって変わるため、詳細はリンク先でご確認ください。</p>
+            <div class="shop-links">
+              <a href="https://a.r10.to/hP9II8" target="_blank" rel="noopener sponsored">楽天ふるさと納税で見る（PR）<span class="mall">山梨県富士吉田市・シャインマスカット</span></a>
+            </div>
+            <span class="pr-note">※ 広告リンク（楽天アフィリエイト）です。寄附額・内容量・受付状況はリンク先でご確認ください。写真はシャインマスカットのイメージです（返礼品そのものの写真ではありません）。</span>
+          </div>
+        </article>
+
+        <article class="cat-card">
+          <div class="ph"><img src="ikura.jpg" alt="ご飯の上にのせたいくら醤油漬け" loading="lazy" /></div>
+          <div class="cat-body">
+            <div class="cat-meta">
+              <span class="chip red">ふるさと納税</span>
+              <span class="chip">北海道・白糠町</span>
+              <span class="chip">冷凍・200g小分け</span>
+              <span class="chip">寄附額 16,000円〜136,000円</span>
+            </div>
+            <h3>いくら醤油漬け（鮭卵・200gパック）<span class="sub">楽天ふるさと納税（北海道白糠町）</span></h3>
+            <p class="rating">★4.76 <span>（レビュー11,961件・2026年11月10日確認時点）</span></p>
+            <p>白糠町の返礼品のいくら醤油漬けです（以下は商品ページの案内をもとにした紹介です）。200gパックの小分けで、1パック（200g）から12パック（合計2.4kg）まで選べます。冷凍で製造日から2年保存できると案内されており、発送時期は30営業日以内／2026年12月／2027年1月〜3月から選択できます。年末年始のごちそうやお歳暮にも向く品です。送料無料です。</p>
+            <p>注意点も正直に：原材料の鮭卵はアメリカ産です（北海道産の鮭卵ではありません）。寄附額はパック数によって変わるため、詳細はリンク先でご確認ください。</p>
+            <div class="shop-links">
+              <a href="https://hb.afl.rakuten.co.jp/ichiba/5941b8f4.9742d675.5941b8f5.2abfda65/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff016683-shiranuka%2F8700-30009172%2F" target="_blank" rel="noopener sponsored">楽天ふるさと納税で見る（PR）<span class="mall">北海道白糠町・いくら醤油漬け</span></a>
+            </div>
+            <span class="pr-note">※ 広告リンク（楽天アフィリエイト）です。寄附額・内容量・受付状況はリンク先でご確認ください。写真はいくら醤油漬けのイメージです（返礼品そのものの写真ではありません）。</span>
+          </div>
+        </article>
+
+        <article class="cat-card">
+          <div class="ph"><img src="miyazaki-beef.jpg" alt="霜降りの和牛ブロック肉" loading="lazy" /></div>
+          <div class="cat-body">
+            <div class="cat-meta">
+              <span class="chip red">ふるさと納税</span>
+              <span class="chip">宮崎県・都城市</span>
+              <span class="chip">冷凍</span>
+              <span class="chip">寄附額 14,000円〜38,000円</span>
+            </div>
+            <h3>宮崎牛 選べる部位＆カット<span class="sub">楽天ふるさと納税（宮崎県都城市）</span></h3>
+            <p class="rating">★4.64 <span>（レビュー6,761件・2026年11月10日確認時点）</span></p>
+            <p>都城市の返礼品の宮崎牛です（以下は商品ページの案内をもとにした紹介です）。宮崎牛は5等級・4等級のみを使用すると案内されています。内容量は500g・1kg・2kg、部位は「赤身＆霜降り」または「赤身のみ」、カットは焼肉用・スライス・しゃぶしゃぶ・サイコロステーキから選べます。冷凍保存で出荷日より60日。発送時期は入金後14日以内／2026年12月／2027年1月から選択でき、年末年始のごちそうに向く品です。送料無料です。</p>
+            <p>注意点も正直に：寄附額は内容量・部位・カットの組み合わせによって変わります。詳細はリンク先でご確認ください。</p>
+            <div class="shop-links">
+              <a href="https://hb.afl.rakuten.co.jp/ichiba/5941b8f4.9742d675.5941b8f5.2abfda65/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff452025-miyakonojo%2Fsku-n203%2F" target="_blank" rel="noopener sponsored">楽天ふるさと納税で見る（PR）<span class="mall">宮崎県都城市・宮崎牛</span></a>
+            </div>
+            <span class="pr-note">※ 広告リンク（楽天アフィリエイト）です。寄附額・内容量・受付状況はリンク先でご確認ください。写真は宮崎牛のイメージです（返礼品そのものの写真ではありません）。</span>
+          </div>
+        </article>
+
+        <article class="cat-card">
+          <div class="ph"><img src="lafrance.jpg" alt="化粧箱に詰めた洋梨ラ・フランス" loading="lazy" /></div>
+          <div class="cat-body">
+            <div class="cat-meta">
+              <span class="chip red">ふるさと納税</span>
+              <span class="chip">山形県・寒河江市</span>
+              <span class="chip">化粧箱入り・送料無料</span>
+              <span class="chip">寄附額 12,000円〜24,000円</span>
+            </div>
+            <h3>選べる 山形県産 洋梨 ラ・フランス 3kg〜5kg 秀品（化粧箱入り）<span class="sub">楽天ふるさと納税（山形県寒河江市）</span></h3>
+            <p class="rating">★4.62 <span>（レビュー74件・2026年11月11日確認時点）</span></p>
+            <p>山形県産の洋梨「ラ・フランス」秀品を化粧箱入りでお届けする返礼品です（以下は商品ページの案内をもとにした紹介です）。内容量は3kg（8〜9玉）・5kgから選べます。発送は2026年11月頃〜12月上旬の予定で、年末のふるさと納税の候補にも向く品です。送料無料です。</p>
+            <p>注意点も正直に：申込受付は2026年11月15日までです。生鮮品のため、お届け後はお早めにお召し上がりください（賞味期限の日数表示は商品ページにありません）。寄附額は内容量によって変わるため、詳細はリンク先でご確認ください。</p>
+            <div class="shop-links">
+              <a href="https://hb.afl.rakuten.co.jp/ichiba/5941b8f4.9742d675.5941b8f5.2abfda65/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff062065-sagae%2F010-b01%2F" target="_blank" rel="noopener sponsored">楽天ふるさと納税で見る（PR）<span class="mall">山形県寒河江市・ラ・フランス</span></a>
+            </div>
+            <span class="pr-note">※ 広告リンク（楽天アフィリエイト）です。寄附額・内容量・受付状況はリンク先でご確認ください。写真はラ・フランスのイメージです（返礼品そのものの写真ではありません）。</span>
+          </div>
+        </article>
+
+        <article class="cat-card">
+          <div class="ph"><img src="motsunabe.jpg" alt="ニラとキャベツをのせた博多もつ鍋" loading="lazy" /></div>
+          <div class="cat-body">
+            <div class="cat-meta">
+              <span class="chip red">楽天市場</span>
+              <span class="chip">福岡県・博多若杉</span>
+              <span class="chip">冷凍・2人前</span>
+              <span class="chip">3,980円（醤油味・基本セット）</span>
+            </div>
+            <h3>博多若杉 牛もつ鍋 お試しセット（2人前）醤油味<span class="sub">楽天市場（博多若杉）</span></h3>
+            <p class="rating">★4.48 <span>（レビュー18,221件・2026年11月11日確認時点）</span></p>
+            <p>博多の老舗・博多若杉のもつ鍋セットです（以下は商品ページの案内をもとにした紹介です）。国産牛もつ240gに濃縮スープ、ちゃんぽん麺2玉、薬味が付いた2人前のお試しセットで、キャベツやニラなど野菜を足して作るタイプです。冬の食卓の一品に。賞味期限は冷凍で90日です。</p>
+            <p>注意点も正直に：送料は無料ですが、北海道・沖縄は追加送料300円がかかります。価格は醤油味・基本セットのもので、内容の組み合わせによって変わる場合があるため、詳細はリンク先でご確認ください。</p>
+            <div class="shop-links">
+              <a href="https://hb.afl.rakuten.co.jp/ichiba/5941b8f4.9742d675.5941b8f5.2abfda65/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fwakasugi%2Fwakaba%2F" target="_blank" rel="noopener sponsored">楽天市場で見る（PR）<span class="mall">博多若杉・牛もつ鍋お試しセット</span></a>
+            </div>
+            <span class="pr-note">※ 広告リンク（楽天アフィリエイト）です。価格・内容・送料はリンク先でご確認ください。写真はもつ鍋のイメージです（商品そのものの写真ではありません）。</span>
+          </div>
+        </article>
+
+        <article class="cat-card">
+          <div class="ph"><img src="fugu.jpg" alt="大皿に盛り付けたふぐの薄造り" loading="lazy" /></div>
+          <div class="cat-body">
+            <div class="cat-meta">
+              <span class="chip red">楽天市場</span>
+              <span class="chip">山口県・下関 山西水産</span>
+              <span class="chip">冷凍・3〜4人前</span>
+              <span class="chip">5,300円（税込）</span>
+            </div>
+            <h3>下関 山西水産 てっちりしゃぶ鍋セット 3〜4人前<span class="sub">楽天市場（下関・山西水産）</span></h3>
+            <p class="rating">★4.43 <span>（レビュー334件・2026年11月11日確認時点）</span></p>
+            <p>下関のふぐ問屋・山西水産の鍋セットです（以下は商品ページの案内をもとにした紹介です）。ふぐ切り身300g・ふぐしゃぶ150g・つみれ10個にスープ500g、ぽん酢・もみじおろしが付いた3〜4人前のセットです。化粧箱入りで、お歳暮の贈り物にも向く品です。賞味期限は冷凍で120日です。</p>
+            <p>注意点も正直に：送料は無料ですが、沖縄・北海道は別途送料1,500円がかかります。価格・内容の詳細はリンク先でご確認ください。</p>
+            <div class="shop-links">
+              <a href="https://hb.afl.rakuten.co.jp/ichiba/5941b8f4.9742d675.5941b8f5.2abfda65/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fyamanishisuisan%2Fnabe_fugu%2F" target="_blank" rel="noopener sponsored">楽天市場で見る（PR）<span class="mall">下関 山西水産・てっちりしゃぶ鍋セット</span></a>
+            </div>
+            <span class="pr-note">※ 広告リンク（楽天アフィリエイト）です。価格・内容・送料はリンク先でご確認ください。写真はふぐ料理のイメージです（商品そのものの写真ではありません）。</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories -->
+  <section class="block" id="categories">
+    <div class="wrap">
+      <div class="sec-head"><h2>カテゴリから探す</h2><span class="en">CATEGORIES</span></div>
+      <p class="sec-lead">お歳暮の定番から、北陸・金沢の名産まで。気になるカテゴリのボタンを押すと、楽天市場の検索結果が開きます。気になった商品は、販売元の情報（内容量・配送・のし対応）をよく確認してからどうぞ。</p>
+
+      <div class="cat-grid">
+        <article class="cat-card">
+          <div class="ph"><img src="crab.jpg" alt="北海道の三大蟹ギフトの写真" loading="lazy" /></div>
+          <div class="cat-body">
+            <h3>海鮮ギフト<span class="sub">北海道の蟹・海の幸</span></h3>
+            <p>冬の主役はやっぱり蟹。タラバガニ・毛ガニ・ズワイガニの食べ比べや、海鮮詰め合わせはお歳暮でも特に喜ばれます。解凍方法と到着日指定の可否をチェック。</p>
+            <div class="cat-meta"><span class="chip red">お歳暮 人気</span><span class="chip">予算 5,000円〜</span></div>
+            <div class="shop-links">
+              <a href="https://hb.afl.rakuten.co.jp/ichiba/5941b8f4.9742d675.5941b8f5.2abfda65/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2582%25AB%25E3%2583%258B%2520%25E3%2582%25AE%25E3%2583%2595%25E3%2583%2588%2520%25E3%2581%258A%25E6%25AD%25B3%25E6%259A%25AE%2F" target="_blank" rel="noopener sponsored">探す<span class="mall">楽天市場</span></a>
+            </div>
+            <span class="pr-note">※ 広告リンクを含みます</span>
+          </div>
+        </article>
+
+        <article class="cat-card">
+          <div class="ph"><img src="wagyu.jpg" alt="木箱に入った霜降り和牛スライスのギフト" loading="lazy" /></div>
+          <div class="cat-body">
+            <h3>和牛・お肉ギフト<span class="sub">すき焼き・しゃぶしゃぶ・ハンバーグ</span></h3>
+            <p>家族で囲むすき焼き用スライスは、特別感と実用性を兼ねた鉄板ギフト。部位（ロース／モモ）とグラム数、冷凍か冷蔵かで満足度が変わります。</p>
+            <div class="cat-meta"><span class="chip red">目上の方に</span><span class="chip">予算 5,000円〜</span></div>
+            <div class="shop-links">
+              <a href="https://hb.afl.rakuten.co.jp/ichiba/5941b8f4.9742d675.5941b8f5.2abfda65/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E5%2592%258C%25E7%2589%259B%2520%25E3%2582%25AE%25E3%2583%2595%25E3%2583%2588%2520%25E3%2581%2599%25E3%2581%258D%25E7%2584%25BC%25E3%2581%258D%2F" target="_blank" rel="noopener sponsored">探す<span class="mall">楽天市場</span></a>
+            </div>
+            <span class="pr-note">※ 広告リンクを含みます</span>
+          </div>
+        </article>
+
+        <article class="cat-card">
+          <div class="ph"><img src="fruit.jpg" alt="メロンと赤・白いちごを詰めたフルーツギフトの箱" loading="lazy" /></div>
+          <div class="cat-body">
+            <h3>フルーツギフト<span class="sub">メロン・いちご・旬の盛り合わせ</span></h3>
+            <p>見た目の華やかさならフルーツ。メロンや旬のいちごは、お酒を飲まない方や年配の方にも贈りやすい選択です。食べ頃の目安が付いている商品が安心。</p>
+            <div class="cat-meta"><span class="chip">幅広い年代に</span><span class="chip">予算 3,000円〜</span></div>
+            <div class="shop-links">
+              <a href="https://hb.afl.rakuten.co.jp/ichiba/5941b8f4.9742d675.5941b8f5.2abfda65/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2583%2595%25E3%2583%25AB%25E3%2583%25BC%25E3%2583%2584%2520%25E3%2582%25AE%25E3%2583%2595%25E3%2583%2588%2520%25E3%2583%25A1%25E3%2583%25AD%25E3%2583%25B3%2520%25E3%2581%2584%25E3%2581%25A1%25E3%2581%2594%2F" target="_blank" rel="noopener sponsored">探す<span class="mall">楽天市場</span></a>
+            </div>
+            <span class="pr-note">※ 広告リンクを含みます</span>
+          </div>
+        </article>
+
+        <article class="cat-card">
+          <div class="ph"><img src="wagashi.jpg" alt="色とりどりの上生菓子が並んだ和菓子の詰め合わせ" loading="lazy" /></div>
+          <div class="cat-body">
+            <h3>和菓子ギフト<span class="sub">上生菓子・羊羹・詰め合わせ</span></h3>
+            <p>季節の意匠が美しい上生菓子や、日持ちする羊羹・最中の詰め合わせ。目上の方への手土産にも外しません。生菓子は日持ちが短いので到着日に注意。</p>
+            <div class="cat-meta"><span class="chip">手土産にも</span><span class="chip">予算 3,000円〜</span></div>
+            <div class="shop-links">
+              <a href="https://hb.afl.rakuten.co.jp/ichiba/5941b8f4.9742d675.5941b8f5.2abfda65/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E5%2592%258C%25E8%258F%2593%25E5%25AD%2590%2520%25E3%2582%25AE%25E3%2583%2595%25E3%2583%2588%2520%25E8%25A9%25B0%25E3%2582%2581%25E5%2590%2588%25E3%2582%258F%25E3%2581%259B%2F" target="_blank" rel="noopener sponsored">探す<span class="mall">楽天市場</span></a>
+            </div>
+            <span class="pr-note">※ 広告リンクを含みます</span>
+          </div>
+        </article>
+
+        <article class="cat-card">
+          <div class="ph"><img src="sweets.jpg" alt="ロイズのチョコレート詰め合わせギフトボックスと各種チョコレート" loading="lazy" /></div>
+          <div class="cat-body">
+            <h3>北海道スイーツ<span class="sub">チョコレート・焼き菓子</span></h3>
+            <p>ロイズをはじめとする北海道のチョコレートや焼き菓子は、職場へのばらまきにも、自分へのご褒美にも。個包装かどうかを贈る相手に合わせて選びましょう。</p>
+            <div class="cat-meta"><span class="chip">職場・友人に</span><span class="chip">予算 2,000円〜</span></div>
+            <div class="shop-links">
+              <a href="https://hb.afl.rakuten.co.jp/ichiba/5941b8f4.9742d675.5941b8f5.2abfda65/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E5%258C%2597%25E6%25B5%25B7%25E9%2581%2593%2520%25E3%2582%25B9%25E3%2582%25A4%25E3%2583%25BC%25E3%2583%2584%2520%25E3%2582%25AE%25E3%2583%2595%25E3%2583%2588%2520%25E3%2583%2581%25E3%2583%25A7%25E3%2582%25B3%25E3%2583%25AC%25E3%2583%25BC%25E3%2583%2588%2F" target="_blank" rel="noopener sponsored">探す<span class="mall">楽天市場</span></a>
+            </div>
+            <span class="pr-note">※ 広告リンクを含みます</span>
+          </div>
+        </article>
+
+        <article class="cat-card">
+          <div class="ph text-ph">
+            <div class="ph-kanazawa">
+              <span class="big">金沢・北陸</span>
+              <span class="small">KANAZAWA &amp; HOKURIKU</span>
+            </div>
+          </div>
+          <div class="cat-body">
+            <h3>金沢・北陸の名産<span class="sub">地元ならではのお取り寄せ</span></h3>
+            <p>金沢を拠点に活動する案内所ならではの枠。加賀の和菓子、のどぐろや寒ブリといった北陸の海の幸など、地元の名産を順次紹介していきます。</p>
+            <div class="cat-meta"><span class="chip red">案内所イチオシ枠</span><span class="chip">順次追加中</span></div>
+            <div class="shop-links">
+              <a href="https://hb.afl.rakuten.co.jp/ichiba/5941b8f4.9742d675.5941b8f5.2abfda65/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E9%2587%2591%25E6%25B2%25A2%2520%25E5%2590%258D%25E7%2594%25A3%2520%25E3%2582%25AE%25E3%2583%2595%25E3%2583%2588%2520%25E3%2581%258A%25E5%258F%2596%25E3%2582%258A%25E5%25AF%2584%25E3%2581%259B%2F" target="_blank" rel="noopener sponsored">探す<span class="mall">楽天市場</span></a>
+            </div>
+            <span class="pr-note">※ 広告リンクを含みます</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Concierge -->
+  <section class="block" id="concierge">
+    <div class="wrap">
+      <div class="sec-head"><h2>ギフト検索コンシェルジュ</h2><span class="en">GIFT FINDER</span></div>
+      <p class="sec-lead">「誰に・いくらで・何系を」が決まれば、探すのは簡単です。3つ選ぶと、条件に合ったキーワードで楽天市場を検索できます。</p>
+
+      <div class="concierge">
+        <h3>3つの質問で、探し方をご案内します</h3>
+        <p>選んだ条件から検索キーワードを組み立てます。リンク先で価格・口コミ・のし対応を比べて、納得の一品を選んでください。</p>
+        <form class="c-form" id="finderForm">
+          <div class="c-field">
+            <label for="fWho">贈る相手は？</label>
+            <select id="fWho">
+              <option value="parents">両親・実家へ</option>
+              <option value="boss">上司・取引先へ</option>
+              <option value="friend">友人・知人へ</option>
+              <option value="family">家族みんなで楽しむ</option>
+              <option value="self">自分へのご褒美</option>
+            </select>
+          </div>
+          <div class="c-field">
+            <label for="fBudget">ご予算は？</label>
+            <select id="fBudget">
+              <option value="3000">〜3,000円</option>
+              <option value="5000" selected>〜5,000円</option>
+              <option value="10000">〜10,000円</option>
+              <option value="over">10,000円以上</option>
+            </select>
+          </div>
+          <div class="c-field">
+            <label for="fKind">ジャンルは？</label>
+            <select id="fKind">
+              <option value="seafood">海鮮（蟹・海の幸）</option>
+              <option value="meat">和牛・お肉</option>
+              <option value="fruit">フルーツ</option>
+              <option value="sweets">スイーツ・洋菓子</option>
+              <option value="wagashi">和菓子</option>
+              <option value="any">おまかせ（ギフト全般）</option>
+            </select>
+          </div>
+        </form>
+        <div style="margin-top:18px;">
+          <button class="btn btn-primary" id="findBtn" type="button">この条件で探す</button>
+        </div>
+        <div class="c-result" id="findResult" aria-live="polite">
+          <p class="kw">検索キーワード：<b id="kwText"></b></p>
+          <div class="c-actions">
+            <a class="btn btn-rakuten" id="rktLink" href="#" target="_blank" rel="noopener sponsored">楽天市場で探す（PR）</a>
+          </div>
+          <p class="c-tip" id="tipText"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Budget -->
+  <section class="block" id="budget">
+    <div class="wrap">
+      <div class="sec-head"><h2>予算で選ぶギフト案</h2><span class="en">BY BUDGET</span></div>
+      <p class="sec-lead">お歳暮の目安は、一般的に3,000円〜5,000円、特にお世話になった方へは5,000円〜10,000円ほど。予算ボタンで絞り込めます。価格は目安で、実際はリンク先でご確認ください。</p>
+
+      <div class="budget-tabs" role="group" aria-label="予算で絞り込み">
+        <button type="button" class="active" data-filter="all">すべて</button>
+        <button type="button" data-filter="3000">〜3,000円</button>
+        <button type="button" data-filter="5000">〜5,000円</button>
+        <button type="button" data-filter="10000">〜10,000円</button>
+      </div>
+
+      <div class="idea-grid" id="ideaGrid">
+        <article class="idea" data-budget="3000">
+          <span class="price">目安 〜3,000円</span>
+          <h3>ご当地スイーツ詰め合わせ</h3>
+          <p>日持ちして分けやすい、間違いのない一枠。職場やご近所へのお歳暮にも。個包装タイプが配りやすいです。</p>
+          <div class="shop-links">
+            <a href="https://hb.afl.rakuten.co.jp/ichiba/5941b8f4.9742d675.5941b8f5.2abfda65/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2581%2594%25E5%25BD%2593%25E5%259C%25B0%2520%25E3%2582%25B9%25E3%2582%25A4%25E3%2583%25BC%25E3%2583%2584%2520%25E8%25A9%25B0%25E3%2582%2581%25E5%2590%2588%25E3%2582%258F%25E3%2581%259B%2520%25E3%2582%25AE%25E3%2583%2595%25E3%2583%2588%2F" target="_blank" rel="noopener sponsored">楽天市場</a>
+          </div>
+        </article>
+
+        <article class="idea" data-budget="3000">
+          <span class="price">目安 〜3,000円</span>
+          <h3>フルーツゼリー・ジュレ</h3>
+          <p>常温で贈れて、年配の方にも喜ばれる優しい甘さ。国産果汁を使ったものは香りが違います。</p>
+          <div class="shop-links">
+            <a href="https://hb.afl.rakuten.co.jp/ichiba/5941b8f4.9742d675.5941b8f5.2abfda65/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2583%2595%25E3%2583%25AB%25E3%2583%25BC%25E3%2583%2584%25E3%2582%25BC%25E3%2583%25AA%25E3%2583%25BC%2520%25E3%2582%25AE%25E3%2583%2595%25E3%2583%2588%2F" target="_blank" rel="noopener sponsored">楽天市場</a>
+          </div>
+        </article>
+
+        <article class="idea" data-budget="5000">
+          <span class="price">目安 〜5,000円</span>
+          <h3>海鮮ギフトセット</h3>
+          <p>干物・漬け魚・海鮮珍味などの詰め合わせ。お酒のあてにも食卓にも使える、実用派の選択です。</p>
+          <div class="shop-links">
+            <a href="https://hb.afl.rakuten.co.jp/ichiba/5941b8f4.9742d675.5941b8f5.2abfda65/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E6%25B5%25B7%25E9%25AE%25AE%2520%25E3%2582%25AE%25E3%2583%2595%25E3%2583%2588%2520%25E3%2582%25BB%25E3%2583%2583%25E3%2583%2588%2F" target="_blank" rel="noopener sponsored">楽天市場</a>
+          </div>
+        </article>
+
+        <article class="idea" data-budget="5000">
+          <span class="price">目安 〜5,000円</span>
+          <h3>和牛ハンバーグ詰め合わせ</h3>
+          <p>冷凍で届いて焼くだけ。共働きのご家庭や実家への贈り物に重宝します。個包装・ソース付きが便利。</p>
+          <div class="shop-links">
+            <a href="https://hb.afl.rakuten.co.jp/ichiba/5941b8f4.9742d675.5941b8f5.2abfda65/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E5%2592%258C%25E7%2589%259B%2520%25E3%2583%258F%25E3%2583%25B3%25E3%2583%2590%25E3%2583%25BC%25E3%2582%25B0%2520%25E3%2582%25AE%25E3%2583%2595%25E3%2583%2588%2F" target="_blank" rel="noopener sponsored">楽天市場</a>
+          </div>
+        </article>
+
+        <article class="idea" data-budget="5000">
+          <span class="price">目安 〜5,000円</span>
+          <h3>メロン1玉ギフト</h3>
+          <p>箱を開けた瞬間の存在感は随一。化粧箱入り・食べ頃シール付きを選ぶと、贈られた側も安心です。</p>
+          <div class="shop-links">
+            <a href="https://hb.afl.rakuten.co.jp/ichiba/5941b8f4.9742d675.5941b8f5.2abfda65/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2583%25A1%25E3%2583%25AD%25E3%2583%25B3%2520%25E3%2582%25AE%25E3%2583%2595%25E3%2583%2588%25201%25E7%258E%2589%2F" target="_blank" rel="noopener sponsored">楽天市場</a>
+          </div>
+        </article>
+
+        <article class="idea" data-budget="10000">
+          <span class="price">目安 〜10,000円</span>
+          <h3>タラバガニギフト</h3>
+          <p>年末の食卓が一気に華やぐ王道。脚の太さ（サイズ表記）と総重量、ボイル済みかどうかを確認して選びましょう。</p>
+          <div class="shop-links">
+            <a href="https://hb.afl.rakuten.co.jp/ichiba/5941b8f4.9742d675.5941b8f5.2abfda65/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2582%25BF%25E3%2583%25A9%25E3%2583%2590%25E3%2582%25AC%25E3%2583%258B%2520%25E3%2582%25AE%25E3%2583%2595%25E3%2583%2588%2F" target="_blank" rel="noopener sponsored">楽天市場</a>
+          </div>
+        </article>
+
+        <article class="idea" data-budget="10000">
+          <span class="price">目安 〜10,000円</span>
+          <h3>和牛すき焼きセット</h3>
+          <p>特に感謝を伝えたい方へ。A5ランク表記だけでなく、産地と部位、グラム数を比べて選ぶのが正直な選び方です。</p>
+          <div class="shop-links">
+            <a href="https://hb.afl.rakuten.co.jp/ichiba/5941b8f4.9742d675.5941b8f5.2abfda65/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E5%2592%258C%25E7%2589%259B%2520%25E3%2581%2599%25E3%2581%258D%25E7%2584%25BC%25E3%2581%258D%2520%25E3%2582%25AE%25E3%2583%2595%25E3%2583%2588%2520%25E3%2582%25BB%25E3%2583%2583%25E3%2583%2588%2F" target="_blank" rel="noopener sponsored">楽天市場</a>
+          </div>
+        </article>
+
+        <article class="idea" data-budget="10000">
+          <span class="price">目安 〜10,000円</span>
+          <h3>高級フルーツ盛り合わせ</h3>
+          <p>メロン・いちご・柑橘など旬の詰め合わせ。見た目も味も文句なしで、家族の多いお宅にも向きます。</p>
+          <div class="shop-links">
+            <a href="https://hb.afl.rakuten.co.jp/ichiba/5941b8f4.9742d675.5941b8f5.2abfda65/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2583%2595%25E3%2583%25AB%25E3%2583%25BC%25E3%2583%2584%2520%25E7%259B%259B%25E3%2582%258A%25E5%2590%2588%25E3%2582%258F%25E3%2581%259B%2520%25E3%2582%25AE%25E3%2583%2595%25E3%2583%2588%2520%25E9%25AB%2598%25E7%25B4%259A%2F" target="_blank" rel="noopener sponsored">楽天市場</a>
+          </div>
+        </article>
+      </div>
+      <p class="pr-note" style="margin-top:14px;">※ 各カードのボタンは広告リンク（アフィリエイト）です。表示価格は目安で、送料の有無もリンク先でご確認ください。</p>
+    </div>
+  </section>
+
+  <!-- Scenes -->
+  <section class="block" id="scenes">
+    <div class="wrap">
+      <div class="sec-head"><h2>シーン別の贈り方</h2><span class="en">SCENES</span></div>
+      <p class="sec-lead">同じギフトでも、届ける時期とのしの書き方で印象が変わります。代表的な4シーンの要点だけ、簡潔にまとめました。</p>
+      <div class="scene-grid">
+        <article class="scene">
+          <span class="when">11月下旬〜12月20日頃まで</span>
+          <h3>お歳暮</h3>
+          <p>一年のお礼を伝える贈り物。のしの表書きは「お歳暮」。地域差はありますが、年内に届くよう早めの手配が安心です。喪中の方へも贈れますが、年明けは「寒中見舞い」として。</p>
+        </article>
+        <article class="scene">
+          <span class="when">当日〜1週間前後の到着が目安</span>
+          <h3>誕生日・記念日</h3>
+          <p>相手の好みを優先できる場面。生ものは到着日指定ができる商品を。メッセージカード対応の有無も購入前に確認を。</p>
+        </article>
+        <article class="scene">
+          <span class="when">慶事から1〜2か月以内</span>
+          <h3>内祝い・お返し</h3>
+          <p>いただいた額の半額〜3分の1が目安。のしの表書きは「内祝」、水引は紅白の蝶結び。名前を入れる場合は注文画面の指定欄を使います。</p>
+        </article>
+        <article class="scene">
+          <span class="when">帰省・訪問の当日</span>
+          <h3>手土産・帰省みやげ</h3>
+          <p>その場で開けて皆で楽しめるものが喜ばれます。日持ちよりも「今おいしいもの」。地元・金沢の名産は話のタネにもなります。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- How to choose -->
+  <section class="block" id="howto">
+    <div class="wrap">
+      <div class="sec-head"><h2>失敗しない選び方</h2><span class="en">HOW TO CHOOSE</span></div>
+      <p class="sec-lead">案内所が商品を紹介するときに実際に確認している観点です。そのまま、ご自身の買い物チェックにも使えます。</p>
+      <div class="steps">
+        <article class="step">
+          <span class="num">1</span>
+          <h3>相手の暮らしを思い浮かべる</h3>
+          <p>人数・冷蔵庫の余裕・お酒や甘いものの好み。立派な品より「無理なくおいしく食べきれる量」が喜ばれます。</p>
+        </article>
+        <article class="step">
+          <span class="num">2</span>
+          <h3>販売元の情報を読み比べる</h3>
+          <p>内容量・産地・賞味期限・配送温度帯・のし対応。写真の印象だけで決めず、仕様欄まで確認するのが正直な選び方です。</p>
+        </article>
+        <article class="step">
+          <span class="num">3</span>
+          <h3>口コミは「悪い点」から読む</h3>
+          <p>良い口コミより、サイズ感や到着状態への不満が判断材料になります。直近のレビューを優先して確認しましょう。</p>
+        </article>
+      </div>
+      <div class="checklist">
+        <h3>注文前の最終チェック</h3>
+        <ul>
+          <li>到着希望日が指定できるか</li>
+          <li>のし・メッセージカード対応か</li>
+          <li>冷蔵／冷凍の別と保存方法</li>
+          <li>賞味期限と食べきれる量か</li>
+          <li>送料込みの総額はいくらか</li>
+          <li>相手の住所・在宅時間に無理がないか</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- TikTok -->
+  <section class="block" id="tiktok">
+    <div class="wrap">
+      <div class="tiktok-band">
+        <div>
+          <h2>動画でも、正直に紹介しています</h2>
+          <p>この案内所は、TikTok「お取り寄せギフト案内所 Japan Gifts」のホームページです。動画では商品の実物や販売元の素材をもとに、良いところも注意点もそのまま紹介します。PR投稿は必ず明記します。</p>
+        </div>
+        <div class="tiktok-card">
+          <div class="handle">@socrateskun</div>
+          <div class="name">お取り寄せギフト案内所 Japan Gifts</div>
+          <a href="https://www.tiktok.com/@socrateskun" target="_blank" rel="noopener">TikTokで動画を見る</a>
+          <p class="goal">まずはフォロワー1,000人を目指して更新中です</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="block" id="faq">
+    <div class="wrap">
+      <div class="sec-head"><h2>よくある質問</h2><span class="en">FAQ</span></div>
+      <div class="faq">
+        <details>
+          <summary>このサイトのリンクは広告ですか？</summary>
+          <p class="a">はい。楽天市場へのリンクには楽天アフィリエイトの広告が含まれ、リンク先で購入されると運営者に紹介料が入る場合があります。そのため各リンク近くに「PR」「広告リンク」の表示をしています。紹介料の有無で商品の評価を変えることはしません。</p>
+        </details>
+        <details>
+          <summary>価格はこのページの表示通りですか？</summary>
+          <p class="a">このページに書いた金額は「予算の目安」です。実際の価格・送料・在庫は時期によって変わるため、必ずリンク先の商品ページで最新情報をご確認ください。</p>
+        </details>
+        <details>
+          <summary>紹介される商品は実際に食べたものだけですか？</summary>
+          <p class="a">方針として、実物または販売元が提供する正確な素材・情報を確認できた商品を紹介します。誇大な表現はせず、気になる点があれば注意点として併記します。TikTokの投稿でも同じ方針で、PRの場合は必ず明記します。</p>
+        </details>
+        <details>
+          <summary>お歳暮はいつまでに注文すればいいですか？</summary>
+          <p class="a">一般的には12月20日頃までの到着が目安とされますが、人気商品は早期に締め切られます。11月下旬〜12月上旬の注文が安心です。到着日指定ができるか、注文前に商品ページでご確認ください。</p>
+        </details>
+        <details>
+          <summary>「この商品も紹介してほしい」という希望は出せますか？</summary>
+          <p class="a">TikTokのコメントでお気軽にどうぞ。いただいたリクエストの中から、販売元の情報が確認できるものを順次取り上げます。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Policy -->
+  <section class="block" id="policy">
+    <div class="wrap">
+      <div class="policy">
+        <h3>運営方針と広告について</h3>
+        <ul>
+          <li>当サイトは、楽天アフィリエイト・プログラムの参加者です。リンク経由の購入で運営者に紹介料が支払われる場合があります。</li>
+          <li>PR・広告を含む紹介には、必ずその旨を明記します。</li>
+          <li>商品紹介は、実物または販売元の正確な情報に基づいて行い、誇大な表現はしません。</li>
+          <li>価格・在庫・キャンペーンは変動します。購入条件は各販売元ページの表示が正式です。</li>
+          <li>当サイトは金沢周辺を拠点に、個人が運営しています。</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap foot">
+    <span>お取り寄せギフト案内所 Japan Gifts</span>
+    <span><a href="https://www.tiktok.com/@socrateskun" target="_blank" rel="noopener">TikTok @socrateskun</a> ／ Japanese gourmet gifts, honestly reviewed.</span>
+    <span class="updated">最終更新：2026年11月12日</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // ---- Budget filter ----
+  var tabs = document.querySelectorAll('.budget-tabs button');
+  var ideas = document.querySelectorAll('#ideaGrid .idea');
+  tabs.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      tabs.forEach(function(b){ b.classList.remove('active'); });
+      btn.classList.add('active');
+      var f = btn.getAttribute('data-filter');
+      ideas.forEach(function(card){
+        if (f === 'all' || card.getAttribute('data-budget') === f) {
+          card.classList.remove('hide');
+        } else {
+          card.classList.add('hide');
+        }
+      });
+    });
+  });
+
+  // ---- Gift finder ----
+  var kindKw = {
+    seafood: 'カニ 海鮮 ギフト',
+    meat: '和牛 ギフト',
+    fruit: 'フルーツ ギフト',
+    sweets: 'スイーツ ギフト 詰め合わせ',
+    wagashi: '和菓子 ギフト 詰め合わせ',
+    any: 'お取り寄せ ギフト'
+  };
+  var budgetKw = {
+    '3000': ' 3000円',
+    '5000': ' 5000円',
+    '10000': ' 10000円',
+    'over': ' 高級'
+  };
+  var sceneKw = {
+    parents: ' お歳暮',
+    boss: ' お歳暮 のし対応',
+    friend: '',
+    family: ' お歳暮',
+    self: ''
+  };
+  var tips = {
+    parents: 'ご両親へは「食べきれる量」が何より大切です。冷凍で日持ちする海鮮やお肉、常温の詰め合わせが扱いやすくおすすめです。',
+    boss: '上司・取引先へは、のし対応と到着日指定ができる商品を選ぶと安心です。生ものは相手の在宅に合わせて指定しましょう。',
+    friend: '友人へは堅苦しくなりすぎない、見た目も楽しい一品を。個包装のスイーツは分けやすく喜ばれます。',
+    family: '家族で囲むなら量と満足感を重視。すき焼きセットや蟹は、年末の食卓そのものが贈り物になります。',
+    self: '自分へのご褒美こそ、正直な口コミチェックを。「悪い点」のレビューを読んでから決めると失敗が減ります。'
+  };
+  var btn = document.getElementById('findBtn');
+  btn.addEventListener('click', function(){
+    var who = document.getElementById('fWho').value;
+    var bud = document.getElementById('fBudget').value;
+    var kind = document.getElementById('fKind').value;
+    var kw = (kindKw[kind] + sceneKw[who] + budgetKw[bud]).replace(/\s+/g,' ').trim();
+    var enc = encodeURIComponent(kw);
+    document.getElementById('kwText').textContent = kw;
+    document.getElementById('rktLink').href = 'https://hb.afl.rakuten.co.jp/ichiba/5941b8f4.9742d675.5941b8f5.2abfda65/?pc=' + encodeURIComponent('https://search.rakuten.co.jp/search/mall/' + enc + '/');
+    document.getElementById('tipText').textContent = '案内所からのひとこと：' + tips[who];
+    var res = document.getElementById('findResult');
+    res.classList.add('show');
+    res.scrollIntoView({ behavior:'smooth', block:'nearest' });
+  });
+})();
+</script>
+</body>
+</html>
