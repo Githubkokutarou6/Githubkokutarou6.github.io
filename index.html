@@ -1266,7 +1266,7 @@
 
       <div class="concierge">
         <h3>3つの質問で、探し方をご案内します</h3>
-        <p>選んだ条件から検索キーワードを組み立てます。リンク先で価格・口コミ・のし対応を比べて、納得の一品を選んでください。</p>
+        <p>選んだ条件から検索キーワードを組み立てます。リンク先で価格・口コミ・のし対応を比べて、納得の一品を選んでください。ジャンルで「人気ランキングから探す」を選ぶと、このページのランキング特集へご案内します。</p>
         <form class="c-form" id="finderForm">
           <div class="c-field">
             <label for="fWho">贈る相手は？</label>
@@ -1296,6 +1296,7 @@
               <option value="sweets">スイーツ・洋菓子</option>
               <option value="wagashi">和菓子</option>
               <option value="any">おまかせ（ギフト全般）</option>
+              <option value="ranking">人気ランキングから探す</option>
             </select>
           </div>
         </form>
@@ -1595,11 +1596,22 @@
     var who = document.getElementById('fWho').value;
     var bud = document.getElementById('fBudget').value;
     var kind = document.getElementById('fKind').value;
-    var kw = (kindKw[kind] + sceneKw[who] + budgetKw[bud]).replace(/\s+/g,' ').trim();
-    var enc = encodeURIComponent(kw);
-    document.getElementById('kwText').textContent = kw;
-    document.getElementById('rktLink').href = 'https://hb.afl.rakuten.co.jp/ichiba/5941b8f4.9742d675.5941b8f5.2abfda65/?pc=' + encodeURIComponent('https://search.rakuten.co.jp/search/mall/' + enc + '/');
-    document.getElementById('tipText').textContent = '案内所からのひとこと：' + tips[who];
+    var rkt = document.getElementById('rktLink');
+    if (kind === 'ranking') {
+      document.getElementById('kwText').textContent = '人気ランキング特集（楽天・Amazon それぞれTOP20）';
+      rkt.href = '#ranking';
+      rkt.removeAttribute('target');
+      rkt.textContent = '人気ランキング特集を見る';
+      document.getElementById('tipText').textContent = '案内所からのひとこと：迷ったらランキングが近道です。楽天は本日時点の総合TOP20、Amazonは2026年上半期のTOP20をまとめています。寄附額や評価も並べて比べられます。';
+    } else {
+      var kw = (kindKw[kind] + sceneKw[who] + budgetKw[bud]).replace(/\s+/g,' ').trim();
+      var enc = encodeURIComponent(kw);
+      document.getElementById('kwText').textContent = kw;
+      rkt.href = 'https://hb.afl.rakuten.co.jp/ichiba/5941b8f4.9742d675.5941b8f5.2abfda65/?pc=' + encodeURIComponent('https://search.rakuten.co.jp/search/mall/' + enc + '/');
+      rkt.setAttribute('target','_blank');
+      rkt.textContent = '楽天市場で探す（PR）';
+      document.getElementById('tipText').textContent = '案内所からのひとこと：' + tips[who];
+    }
     var res = document.getElementById('findResult');
     res.classList.add('show');
     res.scrollIntoView({ behavior:'smooth', block:'nearest' });
