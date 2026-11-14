@@ -318,6 +318,22 @@
   .foot a{ font-weight:700; }
   .updated{ font-size:12px; }
 </style>
+
+  <style>
+    .rank-h{margin:26px 0 12px;font-size:1.15rem;color:var(--crimson-deep)}
+    .rank-list{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+    @media (max-width:760px){.rank-list{grid-template-columns:1fr}}
+    .rank-item{display:flex;align-items:center;gap:12px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:10px 12px}
+    .rank-no{flex:0 0 auto;width:30px;height:30px;border-radius:50%;background:var(--gold-soft);color:var(--gold);font-weight:700;display:flex;align-items:center;justify-content:center;font-size:.95rem}
+    .rank-ph{flex:0 0 auto;width:64px;height:64px;border-radius:8px;overflow:hidden;background:var(--bg-soft)}
+    .rank-ph img{width:100%;height:100%;object-fit:cover;display:block}
+    .rank-body{flex:1 1 auto;min-width:0}
+    .rank-body h4{margin:0 0 4px;font-size:.98rem;line-height:1.35}
+    .rank-meta{margin:0;font-size:.8rem;color:var(--ink-2)}
+    .rank-btn{flex:0 0 auto;font-size:.8rem;font-weight:700;color:#fff;border-radius:999px;padding:8px 12px;text-decoration:none;white-space:nowrap}
+    .rank-btn.rk{background:var(--crimson)}
+    .rank-btn.am{background:#b96a1b}
+  </style>
 </head>
 <body>
 
@@ -333,6 +349,7 @@
     <nav class="main" aria-label="ページ内メニュー">
       <a href="#owner-pick">店主のおすすめ</a>
       <a href="#pickup">新着ピックアップ</a>
+      <a href="#ranking">ランキング特集</a>
       <a href="#categories">カテゴリ</a>
       <a href="#concierge">ギフト検索</a>
       <a href="#budget">予算で選ぶ</a>
@@ -775,7 +792,381 @@
   </section>
 
   <!-- Categories -->
-  <section class="block" id="categories">
+    <section class="block" id="ranking">
+    <div class="wrap">
+      <div class="sec-head"><h2>ふるさと納税 人気ランキング特集</h2><span class="en">FURUSATO RANKING</span></div>
+      <p class="sec-lead">楽天ふるさと納税の総合ランキングTOP20（2026年11月14日時点）と、Amazonふるさと納税の2026年上半期ランキングTOP20をまとめました。年末の駆け込み寄附の候補探しにご活用ください。寄附額・評価は確認時点のもので、変動します。最新の内容はリンク先でご確認ください（楽天の寄附額はランキング表示価格、Amazonの寄附額は1〜9位のみ2026年9月時点の公表額です）。</p>
+      <h3 class="rank-h">楽天ふるさと納税 総合ランキング TOP20</h3>
+      <div class="rank-list">
+        <article class="rank-item">
+          <span class="rank-no">1</span>
+          <div class="rank-ph"><img src="assets/rank-r01.jpg" alt="訳ありホタテ 選び放題（北海道別海町）" loading="lazy" /></div>
+          <div class="rank-body">
+            <h4>訳ありホタテ 選び放題</h4>
+            <p class="rank-meta">北海道別海町 ・ 寄附額 8,500円〜 ・ ★4.84（31,585件）</p>
+          </div>
+          <a class="rank-btn rk" href="https://hb.afl.rakuten.co.jp/ichiba/5941b8f4.9742d675.5941b8f5.2abfda65/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff016918-betsukai%2Fbe018-0054%2F" target="_blank" rel="noopener sponsored">楽天で見る（PR）</a>
+        </article>
+        <article class="rank-item">
+          <span class="rank-no">2</span>
+          <div class="rank-ph"><img src="assets/ikura.jpg" alt="いくら醤油漬け（北海道白糠町）" loading="lazy" /></div>
+          <div class="rank-body">
+            <h4>いくら醤油漬け</h4>
+            <p class="rank-meta">北海道白糠町 ・ 寄附額 16,000円〜 ・ ★4.76（11,974件）</p>
+          </div>
+          <a class="rank-btn rk" href="https://hb.afl.rakuten.co.jp/ichiba/5941b8f4.9742d675.5941b8f5.2abfda65/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff016683-shiranuka%2F8700-30009172%2F" target="_blank" rel="noopener sponsored">楽天で見る（PR）</a>
+        </article>
+        <article class="rank-item">
+          <span class="rank-no">3</span>
+          <div class="rank-ph"><img src="assets/salmon.jpg" alt="エンペラーサーモン（北海道白糠町）" loading="lazy" /></div>
+          <div class="rank-body">
+            <h4>エンペラーサーモン</h4>
+            <p class="rank-meta">北海道白糠町 ・ 寄附額 11,000円〜 ・ ★4.70（8,572件）</p>
+          </div>
+          <a class="rank-btn rk" href="https://hb.afl.rakuten.co.jp/ichiba/5941b8f4.9742d675.5941b8f5.2abfda65/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff016683-shiranuka%2F8700-30009066%2F" target="_blank" rel="noopener sponsored">楽天で見る（PR）</a>
+        </article>
+        <article class="rank-item">
+          <span class="rank-no">4</span>
+          <div class="rank-ph"><img src="assets/rank-r04.jpg" alt="訳あり 厚切り塩銀鮭 切り身（千葉県銚子市）" loading="lazy" /></div>
+          <div class="rank-body">
+            <h4>訳あり 厚切り塩銀鮭 切り身</h4>
+            <p class="rank-meta">千葉県銚子市 ・ 寄附額 8,000円〜 ・ ★4.72（6,949件）</p>
+          </div>
+          <a class="rank-btn rk" href="https://hb.afl.rakuten.co.jp/ichiba/5941b8f4.9742d675.5941b8f5.2abfda65/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff122025-choshi%2Fct-002%2F" target="_blank" rel="noopener sponsored">楽天で見る（PR）</a>
+        </article>
+        <article class="rank-item">
+          <span class="rank-no">5</span>
+          <div class="rank-ph"><img src="assets/rank-r05.jpg" alt="トイレットペーパー ダブル（静岡県富士市）" loading="lazy" /></div>
+          <div class="rank-body">
+            <h4>トイレットペーパー ダブル</h4>
+            <p class="rank-meta">静岡県富士市 ・ 寄附額 9,500円〜 ・ ★4.51（1,832件）</p>
+          </div>
+          <a class="rank-btn rk" href="https://hb.afl.rakuten.co.jp/ichiba/5941b8f4.9742d675.5941b8f5.2abfda65/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff222101-fuji%2F1074%2F" target="_blank" rel="noopener sponsored">楽天で見る（PR）</a>
+        </article>
+        <article class="rank-item">
+          <span class="rank-no">6</span>
+          <div class="rank-ph"><img src="assets/rank-r06.jpg" alt="甲羅組 ズワイガニ（生食OK）（福井県敦賀市）" loading="lazy" /></div>
+          <div class="rank-body">
+            <h4>甲羅組 ズワイガニ（生食OK）</h4>
+            <p class="rank-meta">福井県敦賀市 ・ 寄附額 11,000円〜 ・ ★4.38（2,430件）</p>
+          </div>
+          <a class="rank-btn rk" href="https://hb.afl.rakuten.co.jp/ichiba/5941b8f4.9742d675.5941b8f5.2abfda65/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff182028-tsuruga%2F59410445%2F" target="_blank" rel="noopener sponsored">楽天で見る（PR）</a>
+        </article>
+        <article class="rank-item">
+          <span class="rank-no">7</span>
+          <div class="rank-ph"><img src="assets/rank-r07.jpg" alt="有田みかん「未来への虹」（和歌山県有田市）" loading="lazy" /></div>
+          <div class="rank-body">
+            <h4>有田みかん「未来への虹」</h4>
+            <p class="rank-meta">和歌山県有田市 ・ 寄附額 10,000円〜 ・ ★4.30（2,586件）</p>
+          </div>
+          <a class="rank-btn rk" href="https://hb.afl.rakuten.co.jp/ichiba/5941b8f4.9742d675.5941b8f5.2abfda65/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff302040-arida%2F03%2F" target="_blank" rel="noopener sponsored">楽天で見る（PR）</a>
+        </article>
+        <article class="rank-item">
+          <span class="rank-no">8</span>
+          <div class="rank-ph"><img src="assets/rank-r08.jpg" alt="ソフトパックティッシュ 60/120パック（大阪府泉佐野市）" loading="lazy" /></div>
+          <div class="rank-body">
+            <h4>ソフトパックティッシュ 60/120パック</h4>
+            <p class="rank-meta">大阪府泉佐野市 ・ 寄附額 13,000円〜 ・ ★4.58（605件）</p>
+          </div>
+          <a class="rank-btn rk" href="https://hb.afl.rakuten.co.jp/ichiba/5941b8f4.9742d675.5941b8f5.2abfda65/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff272132-izumisano%2F010b1754%2F" target="_blank" rel="noopener sponsored">楽天で見る（PR）</a>
+        </article>
+        <article class="rank-item">
+          <span class="rank-no">9</span>
+          <div class="rank-ph"><img src="assets/rank-r09.jpg" alt="やわらか牛タン（北海道別海町）" loading="lazy" /></div>
+          <div class="rank-body">
+            <h4>やわらか牛タン</h4>
+            <p class="rank-meta">北海道別海町 ・ 寄附額 7,000円〜 ・ ★4.54（4,787件）</p>
+          </div>
+          <a class="rank-btn rk" href="https://hb.afl.rakuten.co.jp/ichiba/5941b8f4.9742d675.5941b8f5.2abfda65/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff016918-betsukai%2Fns0000020%2F" target="_blank" rel="noopener sponsored">楽天で見る（PR）</a>
+        </article>
+        <article class="rank-item">
+          <span class="rank-no">10</span>
+          <div class="rank-ph"><img src="assets/rank-r10.jpg" alt="新米 令和8年産 コシヒカリ 品種おまかせ（茨城県つくばみらい市）" loading="lazy" /></div>
+          <div class="rank-body">
+            <h4>新米 令和8年産 コシヒカリ 品種おまかせ</h4>
+            <p class="rank-meta">茨城県つくばみらい市 ・ 寄附額 4,900円〜 ・ ★4.39（749件）</p>
+          </div>
+          <a class="rank-btn rk" href="https://hb.afl.rakuten.co.jp/ichiba/5941b8f4.9742d675.5941b8f5.2abfda65/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff082350-tsukubamirai%2Fcl14-nt%2F" target="_blank" rel="noopener sponsored">楽天で見る（PR）</a>
+        </article>
+        <article class="rank-item">
+          <span class="rank-no">11</span>
+          <div class="rank-ph"><img src="assets/miyazaki-beef.jpg" alt="宮崎牛 選べる部位＆カット（宮崎県都城市）" loading="lazy" /></div>
+          <div class="rank-body">
+            <h4>宮崎牛 選べる部位＆カット</h4>
+            <p class="rank-meta">宮崎県都城市 ・ 寄附額 14,000円〜 ・ ★4.64（6,769件）</p>
+          </div>
+          <a class="rank-btn rk" href="https://hb.afl.rakuten.co.jp/ichiba/5941b8f4.9742d675.5941b8f5.2abfda65/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff452025-miyakonojo%2Fsku-n203%2F" target="_blank" rel="noopener sponsored">楽天で見る（PR）</a>
+        </article>
+        <article class="rank-item">
+          <span class="rank-no">12</span>
+          <div class="rank-ph"><img src="assets/zuwai-crab.jpg" alt="生本ずわいがに 棒肉ポーション（宮城県気仙沼市）" loading="lazy" /></div>
+          <div class="rank-body">
+            <h4>生本ずわいがに 棒肉ポーション</h4>
+            <p class="rank-meta">宮城県気仙沼市 ・ 寄附額 16,000円〜 ・ ★4.52（2,035件）</p>
+          </div>
+          <a class="rank-btn rk" href="https://hb.afl.rakuten.co.jp/ichiba/5941b8f4.9742d675.5941b8f5.2abfda65/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff042056-kesennuma%2F20560540%2F" target="_blank" rel="noopener sponsored">楽天で見る（PR）</a>
+        </article>
+        <article class="rank-item">
+          <span class="rank-no">13</span>
+          <div class="rank-ph"><img src="assets/rank-r13.jpg" alt="訳あり 骨取りさば（千葉県銚子市）" loading="lazy" /></div>
+          <div class="rank-body">
+            <h4>訳あり 骨取りさば</h4>
+            <p class="rank-meta">千葉県銚子市 ・ 寄附額 10,000円〜 ・ ★4.79（2,708件）</p>
+          </div>
+          <a class="rank-btn rk" href="https://hb.afl.rakuten.co.jp/ichiba/5941b8f4.9742d675.5941b8f5.2abfda65/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff122025-choshi%2Fiida009%2F" target="_blank" rel="noopener sponsored">楽天で見る（PR）</a>
+        </article>
+        <article class="rank-item">
+          <span class="rank-no">14</span>
+          <div class="rank-ph"><img src="assets/rank-r14.jpg" alt="新米 さがびより 定期便（佐賀県上峰町）" loading="lazy" /></div>
+          <div class="rank-body">
+            <h4>新米 さがびより 定期便</h4>
+            <p class="rank-meta">佐賀県上峰町 ・ 寄附額 4,600円〜 ・ ★4.64（1,775件）</p>
+          </div>
+          <a class="rank-btn rk" href="https://hb.afl.rakuten.co.jp/ichiba/5941b8f4.9742d675.5941b8f5.2abfda65/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff413453-kamimine%2Fb-670-as%2F" target="_blank" rel="noopener sponsored">楽天で見る（PR）</a>
+        </article>
+        <article class="rank-item">
+          <span class="rank-no">15</span>
+          <div class="rank-ph"><img src="assets/gyutan.jpg" alt="厚切り牛タン 塩味 約10mm（岩手県花巻市）" loading="lazy" /></div>
+          <div class="rank-body">
+            <h4>厚切り牛タン 塩味 約10mm</h4>
+            <p class="rank-meta">岩手県花巻市 ・ 寄附額 8,000円〜 ・ ★4.49（13,839件）</p>
+          </div>
+          <a class="rank-btn rk" href="https://hb.afl.rakuten.co.jp/ichiba/5941b8f4.9742d675.5941b8f5.2abfda65/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff032051-hanamaki%2F14301-30020810%2F" target="_blank" rel="noopener sponsored">楽天で見る（PR）</a>
+        </article>
+        <article class="rank-item">
+          <span class="rank-no">16</span>
+          <div class="rank-ph"><img src="assets/rank-r16.jpg" alt="熊本 ふるさと無洗米 ひのひかりブレンド（熊本県御船町）" loading="lazy" /></div>
+          <div class="rank-body">
+            <h4>熊本 ふるさと無洗米 ひのひかりブレンド</h4>
+            <p class="rank-meta">熊本県御船町 ・ 寄附額 6,500円〜 ・ ★4.57（3,602件）</p>
+          </div>
+          <a class="rank-btn rk" href="https://hb.afl.rakuten.co.jp/ichiba/5941b8f4.9742d675.5941b8f5.2abfda65/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff434418-mifune%2F10000461%2F" target="_blank" rel="noopener sponsored">楽天で見る（PR）</a>
+        </article>
+        <article class="rank-item">
+          <span class="rank-no">17</span>
+          <div class="rank-ph"><img src="assets/hotate.jpg" alt="オホーツク海産 ホタテ玉冷（北海道紋別市）" loading="lazy" /></div>
+          <div class="rank-body">
+            <h4>オホーツク海産 ホタテ玉冷</h4>
+            <p class="rank-meta">北海道紋別市 ・ 寄附額 11,000円〜 ・ ★4.77（8,564件）</p>
+          </div>
+          <a class="rank-btn rk" href="https://hb.afl.rakuten.co.jp/ichiba/5941b8f4.9742d675.5941b8f5.2abfda65/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff012190-mombetsu%2F10-68%2F" target="_blank" rel="noopener sponsored">楽天で見る（PR）</a>
+        </article>
+        <article class="rank-item">
+          <span class="rank-no">18</span>
+          <div class="rank-ph"><img src="assets/rank-r18.jpg" alt="クラリス ボックスティッシュ 60箱（栃木県小山市）" loading="lazy" /></div>
+          <div class="rank-body">
+            <h4>クラリス ボックスティッシュ 60箱</h4>
+            <p class="rank-meta">栃木県小山市 ・ 寄附額 16,500円 ・ ★4.59（2,226件）</p>
+          </div>
+          <a class="rank-btn rk" href="https://hb.afl.rakuten.co.jp/ichiba/5941b8f4.9742d675.5941b8f5.2abfda65/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff092088-oyama%2F1256759%2F" target="_blank" rel="noopener sponsored">楽天で見る（PR）</a>
+        </article>
+        <article class="rank-item">
+          <span class="rank-no">19</span>
+          <div class="rank-ph"><img src="assets/rank-r19.jpg" alt="スコッティ トイレットペーパー 3倍長持ち（埼玉県草加市）" loading="lazy" /></div>
+          <div class="rank-body">
+            <h4>スコッティ トイレットペーパー 3倍長持ち</h4>
+            <p class="rank-meta">埼玉県草加市 ・ 寄附額 15,000円 ・ ★4.78（2,616件）</p>
+          </div>
+          <a class="rank-btn rk" href="https://hb.afl.rakuten.co.jp/ichiba/5941b8f4.9742d675.5941b8f5.2abfda65/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff112216-soka%2F56710310%2F" target="_blank" rel="noopener sponsored">楽天で見る（PR）</a>
+        </article>
+        <article class="rank-item">
+          <span class="rank-no">20</span>
+          <div class="rank-ph"><img src="assets/rank-r20.jpg" alt="能登米 こしひかり 定期便（石川県宝達志水町）" loading="lazy" /></div>
+          <div class="rank-body">
+            <h4>能登米 こしひかり 定期便</h4>
+            <p class="rank-meta">石川県宝達志水町 ・ 寄附額 1,500円〜 ・ ★4.82（6,104件）</p>
+          </div>
+          <a class="rank-btn rk" href="https://hb.afl.rakuten.co.jp/ichiba/5941b8f4.9742d675.5941b8f5.2abfda65/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff173860-hodatsushimizu%2F38600101%2F" target="_blank" rel="noopener sponsored">楽天で見る（PR）</a>
+        </article>
+      </div>
+      <h3 class="rank-h">Amazonふるさと納税 人気ランキング TOP20（2026年上半期）</h3>
+      <div class="rank-list">
+        <article class="rank-item">
+          <span class="rank-no">1</span>
+          <div class="rank-ph"><img src="assets/rank-a01.jpg" alt="コシヒカリ 精米 5kg" loading="lazy" /></div>
+          <div class="rank-body">
+            <h4>コシヒカリ 精米 5kg</h4>
+            <p class="rank-meta">茨城県桜川市 ・ 寄附額 6,000円 ・ ★4.4</p>
+          </div>
+          <a class="rank-btn am" href="https://www.amazon.co.jp/dp/B0FP2NBYF8?tag=handpank0c-22" target="_blank" rel="noopener sponsored">Amazonで見る（PR）</a>
+        </article>
+        <article class="rank-item">
+          <span class="rank-no">2</span>
+          <div class="rank-ph"><img src="assets/rank-a02.jpg" alt="B級 銀鮭 切り身 約2.4kg（訳あり）" loading="lazy" /></div>
+          <div class="rank-body">
+            <h4>B級 銀鮭 切り身 約2.4kg（訳あり）</h4>
+            <p class="rank-meta">千葉県いすみ市 ・ 寄附額 12,000円 ・ ★4.2</p>
+          </div>
+          <a class="rank-btn am" href="https://www.amazon.co.jp/dp/B0DL5S8W5J?tag=handpank0c-22" target="_blank" rel="noopener sponsored">Amazonで見る（PR）</a>
+        </article>
+        <article class="rank-item">
+          <span class="rank-no">3</span>
+          <div class="rank-ph"><img src="assets/rank-a03.jpg" alt="クラリス ボックスティッシュ 60箱" loading="lazy" /></div>
+          <div class="rank-body">
+            <h4>クラリス ボックスティッシュ 60箱</h4>
+            <p class="rank-meta">栃木県小山市 ・ 寄附額 14,000円 ・ ★4.4</p>
+          </div>
+          <a class="rank-btn am" href="https://www.amazon.co.jp/dp/B0DP47LF36?tag=handpank0c-22" target="_blank" rel="noopener sponsored">Amazonで見る（PR）</a>
+        </article>
+        <article class="rank-item">
+          <span class="rank-no">4</span>
+          <div class="rank-ph"><img src="assets/rank-a04.jpg" alt="九州産黒毛和牛 合挽ハンバーグ 140g×12個" loading="lazy" /></div>
+          <div class="rank-body">
+            <h4>九州産黒毛和牛 合挽ハンバーグ 140g×12個</h4>
+            <p class="rank-meta">佐賀県唐津市 ・ 寄附額 11,000円 ・ ★4.5</p>
+          </div>
+          <a class="rank-btn am" href="https://www.amazon.co.jp/dp/B0DNZDS5J4?tag=handpank0c-22" target="_blank" rel="noopener sponsored">Amazonで見る（PR）</a>
+        </article>
+        <article class="rank-item">
+          <span class="rank-no">5</span>
+          <div class="rank-ph"><img src="assets/rank-a05.jpg" alt="かつおのたたき 2.5kg" loading="lazy" /></div>
+          <div class="rank-body">
+            <h4>かつおのたたき 2.5kg</h4>
+            <p class="rank-meta">愛媛県愛南町 ・ 寄附額 9,000円 ・ ★4.4</p>
+          </div>
+          <a class="rank-btn am" href="https://www.amazon.co.jp/dp/B0DNMBFVMK?tag=handpank0c-22" target="_blank" rel="noopener sponsored">Amazonで見る（PR）</a>
+        </article>
+        <article class="rank-item">
+          <span class="rank-no">6</span>
+          <div class="rank-ph"><img src="assets/rank-a06.jpg" alt="訳あり 無添加 塩サバ 3kg" loading="lazy" /></div>
+          <div class="rank-body">
+            <h4>訳あり 無添加 塩サバ 3kg</h4>
+            <p class="rank-meta">千葉県勝浦市 ・ 寄附額 17,500円 ・ ★4.4</p>
+          </div>
+          <a class="rank-btn am" href="https://www.amazon.co.jp/dp/B0DFPKLB92?tag=handpank0c-22" target="_blank" rel="noopener sponsored">Amazonで見る（PR）</a>
+        </article>
+        <article class="rank-item">
+          <span class="rank-no">7</span>
+          <div class="rank-ph"><img src="assets/rank-a07.jpg" alt="ネギトロ 100g×15パック" loading="lazy" /></div>
+          <div class="rank-body">
+            <h4>ネギトロ 100g×15パック</h4>
+            <p class="rank-meta">静岡県吉田町 ・ 寄附額 9,000円 ・ ★4.3</p>
+          </div>
+          <a class="rank-btn am" href="https://www.amazon.co.jp/dp/B0DQ566VRD?tag=handpank0c-22" target="_blank" rel="noopener sponsored">Amazonで見る（PR）</a>
+        </article>
+        <article class="rank-item">
+          <span class="rank-no">8</span>
+          <div class="rank-ph"><img src="assets/rank-a08.jpg" alt="厳選シャインマスカット 1.2kg（2027年発送・先行予約）" loading="lazy" /></div>
+          <div class="rank-body">
+            <h4>厳選シャインマスカット 1.2kg（2027年発送・先行予約）</h4>
+            <p class="rank-meta">山梨県富士吉田市 ・ 寄附額 10,000円 ・ ★4.6</p>
+          </div>
+          <a class="rank-btn am" href="https://www.amazon.co.jp/dp/B0DMLJDJG6?tag=handpank0c-22" target="_blank" rel="noopener sponsored">Amazonで見る（PR）</a>
+        </article>
+        <article class="rank-item">
+          <span class="rank-no">9</span>
+          <div class="rank-ph"><img src="assets/rank-a09.jpg" alt="by Amazon 天然水 ラベルレス 2L×9本" loading="lazy" /></div>
+          <div class="rank-body">
+            <h4>by Amazon 天然水 ラベルレス 2L×9本</h4>
+            <p class="rank-meta">静岡県小山町 ・ 寄附額 3,750円 ・ ★4.3</p>
+          </div>
+          <a class="rank-btn am" href="https://www.amazon.co.jp/dp/B08GZR18S3?tag=handpank0c-22" target="_blank" rel="noopener sponsored">Amazonで見る（PR）</a>
+        </article>
+        <article class="rank-item">
+          <span class="rank-no">10</span>
+          <div class="rank-ph"><img src="assets/rank-a10.jpg" alt="訳あり 塩銀鮭 切り落とし 約3kg" loading="lazy" /></div>
+          <div class="rank-body">
+            <h4>訳あり 塩銀鮭 切り落とし 約3kg</h4>
+            <p class="rank-meta">千葉県いすみ市 ・ ★4.3</p>
+          </div>
+          <a class="rank-btn am" href="https://www.amazon.co.jp/dp/B0DL5TKHJ1?tag=handpank0c-22" target="_blank" rel="noopener sponsored">Amazonで見る（PR）</a>
+        </article>
+        <article class="rank-item">
+          <span class="rank-no">11</span>
+          <div class="rank-ph"><img src="assets/rank-a11.jpg" alt="【Amazon限定】訳あり 銀鮭 切り身 1kg" loading="lazy" /></div>
+          <div class="rank-body">
+            <h4>【Amazon限定】訳あり 銀鮭 切り身 1kg</h4>
+            <p class="rank-meta">★4.3</p>
+          </div>
+          <a class="rank-btn am" href="https://www.amazon.co.jp/dp/B0DP6C2WJT?tag=handpank0c-22" target="_blank" rel="noopener sponsored">Amazonで見る（PR）</a>
+        </article>
+        <article class="rank-item">
+          <span class="rank-no">12</span>
+          <div class="rank-ph"><img src="assets/rank-a12.jpg" alt="新米 品種おまかせ 5kg 令和8年産" loading="lazy" /></div>
+          <div class="rank-body">
+            <h4>新米 品種おまかせ 5kg 令和8年産</h4>
+            <p class="rank-meta">茨城県つくばみらい市 ・ ★4.4</p>
+          </div>
+          <a class="rank-btn am" href="https://www.amazon.co.jp/dp/B0G4W9J5TP?tag=handpank0c-22" target="_blank" rel="noopener sponsored">Amazonで見る（PR）</a>
+        </article>
+        <article class="rank-item">
+          <span class="rank-no">13</span>
+          <div class="rank-ph"><img src="assets/rank-a13.jpg" alt="by Amazon 天然水 ラベルレス 500ml×24本" loading="lazy" /></div>
+          <div class="rank-body">
+            <h4>by Amazon 天然水 ラベルレス 500ml×24本</h4>
+            <p class="rank-meta">静岡県小山町 ・ ★4.3</p>
+          </div>
+          <a class="rank-btn am" href="https://www.amazon.co.jp/dp/B092D5HM5S?tag=handpank0c-22" target="_blank" rel="noopener sponsored">Amazonで見る（PR）</a>
+        </article>
+        <article class="rank-item">
+          <span class="rank-no">14</span>
+          <div class="rank-ph"><img src="assets/rank-a14.jpg" alt="牛タン 厚切り 1kg（肉卸直営）" loading="lazy" /></div>
+          <div class="rank-body">
+            <h4>牛タン 厚切り 1kg（肉卸直営）</h4>
+            <p class="rank-meta">熊本県水上村 ・ ★4.1</p>
+          </div>
+          <a class="rank-btn am" href="https://www.amazon.co.jp/dp/B0BTLHNCK1?tag=handpank0c-22" target="_blank" rel="noopener sponsored">Amazonで見る（PR）</a>
+        </article>
+        <article class="rank-item">
+          <span class="rank-no">15</span>
+          <div class="rank-ph"><img src="assets/rank-a15.jpg" alt="ALOHAS ソフトパックティッシュ 60パック" loading="lazy" /></div>
+          <div class="rank-body">
+            <h4>ALOHAS ソフトパックティッシュ 60パック</h4>
+            <p class="rank-meta">大阪府泉佐野市 ・ ★4.1</p>
+          </div>
+          <a class="rank-btn am" href="https://www.amazon.co.jp/dp/B0FNW7JSW5?tag=handpank0c-22" target="_blank" rel="noopener sponsored">Amazonで見る（PR）</a>
+        </article>
+        <article class="rank-item">
+          <span class="rank-no">16</span>
+          <div class="rank-ph"><img src="assets/rank-a16.jpg" alt="おおさきうなぎ 長蒲焼 2尾（Amazon限定）" loading="lazy" /></div>
+          <div class="rank-body">
+            <h4>おおさきうなぎ 長蒲焼 2尾（Amazon限定）</h4>
+            <p class="rank-meta">鹿児島県大崎町 ・ ★4.1</p>
+          </div>
+          <a class="rank-btn am" href="https://www.amazon.co.jp/dp/B0F3WZLJ2H?tag=handpank0c-22" target="_blank" rel="noopener sponsored">Amazonで見る（PR）</a>
+        </article>
+        <article class="rank-item">
+          <span class="rank-no">17</span>
+          <div class="rank-ph"><img src="assets/rank-a17.jpg" alt="スコッティ トイレットペーパー ダブル 48ロール" loading="lazy" /></div>
+          <div class="rank-body">
+            <h4>スコッティ トイレットペーパー ダブル 48ロール</h4>
+            <p class="rank-meta">秋田県秋田市 ・ ★4.4</p>
+          </div>
+          <a class="rank-btn am" href="https://www.amazon.co.jp/dp/B01F389JW8?tag=handpank0c-22" target="_blank" rel="noopener sponsored">Amazonで見る（PR）</a>
+        </article>
+        <article class="rank-item">
+          <span class="rank-no">18</span>
+          <div class="rank-ph"><img src="assets/rank-a18.jpg" alt="あきたこまち 無洗米 精米 5kg" loading="lazy" /></div>
+          <div class="rank-body">
+            <h4>あきたこまち 無洗米 精米 5kg</h4>
+            <p class="rank-meta">秋田県大仙市 ・ ★4.1</p>
+          </div>
+          <a class="rank-btn am" href="https://www.amazon.co.jp/dp/B0FZVWTC5X?tag=handpank0c-22" target="_blank" rel="noopener sponsored">Amazonで見る（PR）</a>
+        </article>
+        <article class="rank-item">
+          <span class="rank-no">19</span>
+          <div class="rank-ph"><img src="assets/rank-a19.jpg" alt="訳あり 銀鮭 カマ 約3kg" loading="lazy" /></div>
+          <div class="rank-body">
+            <h4>訳あり 銀鮭 カマ 約3kg</h4>
+            <p class="rank-meta">千葉県いすみ市 ・ ★4.5</p>
+          </div>
+          <a class="rank-btn am" href="https://www.amazon.co.jp/dp/B0DL5QDRD8?tag=handpank0c-22" target="_blank" rel="noopener sponsored">Amazonで見る（PR）</a>
+        </article>
+        <article class="rank-item">
+          <span class="rank-no">20</span>
+          <div class="rank-ph"><img src="assets/rank-a20.jpg" alt="アサヒ スーパードライ 350ml×24本" loading="lazy" /></div>
+          <div class="rank-body">
+            <h4>アサヒ スーパードライ 350ml×24本</h4>
+            <p class="rank-meta">茨城県守谷市 ・ ★4.3</p>
+          </div>
+          <a class="rank-btn am" href="https://www.amazon.co.jp/dp/B0029ZFYJQ?tag=handpank0c-22" target="_blank" rel="noopener sponsored">Amazonで見る（PR）</a>
+        </article>
+      </div>
+      <p class="pr-note">※ 各リンクは広告リンク（楽天アフィリエイト／Amazonアソシエイト）です。写真は販売元の商品ページの画像です。寄附の申込期限や発送時期は自治体ごとに異なります。</p>
+    </div>
+  </section>
+
+<section class="block" id="categories">
     <div class="wrap">
       <div class="sec-head"><h2>カテゴリから探す</h2><span class="en">CATEGORIES</span></div>
       <p class="sec-lead">お歳暮の定番から、北陸・金沢の名産まで。気になるカテゴリのボタンを押すと、楽天市場の検索結果が開きます。気になった商品は、販売元の情報（内容量・配送・のし対応）をよく確認してからどうぞ。</p>
