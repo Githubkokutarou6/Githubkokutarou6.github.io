@@ -1,0 +1,497 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="description" content="お歳暮に喜ばれるお取り寄せグルメ特集。届ける時期・のし・予算の目安と、お歳暮に向く品を正直に紹介します。" />
+<link rel="icon" href="data:," />
+<title>お歳暮ギフト特集2026｜喜ばれるお取り寄せグルメ｜お取り寄せギフト案内所 Japan Gifts</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --bg:#faf6ef;
+    --bg-soft:#f3ecdf;
+    --surface:#ffffff;
+    --surface-2:#fffaf1;
+    --ink:#2c1f16;
+    --ink-2:#5d4c3d;
+    --ink-3:#8a7663;
+    --line:#e5d9c6;
+    --crimson:#8c1d2f;
+    --crimson-deep:#6d1424;
+    --crimson-soft:#f7e8e4;
+    --gold:#a87c1f;
+    --gold-soft:#f4ead2;
+    --green:#3e6b4f;
+    --shadow:0 10px 30px rgba(80,50,20,.10);
+    --radius:16px;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#1d1611;
+      --bg-soft:#241b15;
+      --surface:#2a211a;
+      --surface-2:#332820;
+      --ink:#f3e9dc;
+      --ink-2:#cdbca6;
+      --ink-3:#a08b74;
+      --line:#453729;
+      --crimson:#e08a97;
+      --crimson-deep:#f0aab4;
+      --crimson-soft:#3d222a;
+      --gold:#d9ab4e;
+      --gold-soft:#3a2f18;
+      --green:#8fc7a5;
+      --shadow:0 10px 30px rgba(0,0,0,.35);
+    }
+  }
+  html{ scroll-behavior:smooth; }
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:"Zen Kaku Gothic New", system-ui, -apple-system, "Hiragino Kaku Gothic ProN", sans-serif;
+    font-size:16px; line-height:1.75; -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,p,ul,ol,figure{ margin:0; }
+  ul,ol{ padding:0; list-style:none; }
+  a{ color:inherit; }
+  img{ display:block; max-width:100%; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:0 20px; }
+
+  /* Header */
+  header.site{
+    position:sticky; top:0; z-index:50;
+    background:color-mix(in srgb, var(--bg) 92%, transparent);
+    backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .site-inner{ display:flex; align-items:center; gap:16px; padding:12px 0; }
+  .brand{ display:flex; align-items:center; gap:12px; text-decoration:none; min-width:0; }
+  .brand-mark{
+    width:42px; height:42px; flex:none; border-radius:10px;
+    background:var(--crimson); color:#fff;
+    display:grid; place-items:center;
+    font-family:"Shippori Mincho", serif; font-weight:800; font-size:20px;
+  }
+  @media (prefers-color-scheme: dark){ .brand-mark{ color:#241016; } }
+  .brand-text{ line-height:1.25; min-width:0; }
+  .brand-text strong{ display:block; font-family:"Shippori Mincho", serif; font-size:16px; font-weight:800; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  .brand-text span{ font-size:11px; color:var(--ink-3); letter-spacing:.14em; }
+  nav.main{ margin-left:auto; display:flex; gap:4px; flex-wrap:wrap; justify-content:flex-end; }
+  nav.main a{
+    text-decoration:none; font-size:13.5px; font-weight:700; color:var(--ink-2);
+    padding:8px 11px; border-radius:999px;
+  }
+  nav.main a:hover{ background:var(--bg-soft); color:var(--ink); }
+  nav.main a.cta{ background:var(--crimson); color:#fff; }
+  @media (prefers-color-scheme: dark){ nav.main a.cta{ color:#241016; } }
+  @media (max-width:760px){ nav.main a:not(.cta){ display:none; } }
+
+  /* Hero */
+  .hero{ padding:44px 0 8px; }
+  .hero-grid{ display:grid; grid-template-columns:1.05fr .95fr; gap:36px; align-items:center; }
+  @media (max-width:860px){ .hero-grid{ grid-template-columns:1fr; gap:24px; } }
+  .season-tag{
+    display:inline-flex; align-items:center; gap:8px;
+    background:var(--crimson-soft); color:var(--crimson);
+    font-size:13px; font-weight:900; padding:6px 14px; border-radius:999px; margin-bottom:18px;
+  }
+  .season-tag::before{ content:""; width:8px; height:8px; border-radius:50%; background:var(--crimson); }
+  h1{
+    font-family:"Shippori Mincho", serif; font-weight:800;
+    font-size:clamp(30px, 5.4vw, 46px); line-height:1.3; letter-spacing:.01em;
+  }
+  h1 .accent{ color:var(--crimson); }
+  .hero-sub{ margin-top:16px; color:var(--ink-2); font-size:16.5px; max-width:34em; }
+  .hero-sub .en{ display:block; font-size:13.5px; color:var(--ink-3); margin-top:6px; letter-spacing:.02em; }
+  .hero-actions{ display:flex; flex-wrap:wrap; gap:12px; margin-top:26px; }
+  .btn{
+    display:inline-flex; align-items:center; gap:8px; text-decoration:none;
+    font-weight:900; font-size:15px; padding:13px 22px; border-radius:999px;
+    border:1px solid transparent; cursor:pointer; transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .btn:hover{ transform:translateY(-1px); }
+  .btn-primary{ background:var(--crimson); color:#fff; box-shadow:0 8px 20px rgba(140,29,47,.25); }
+  @media (prefers-color-scheme: dark){ .btn-primary{ color:#241016; } }
+  .btn-ghost{ background:var(--surface); border-color:var(--line); color:var(--ink); }
+  .hero-points{ display:flex; flex-wrap:wrap; gap:8px 18px; margin-top:22px; font-size:13.5px; color:var(--ink-2); font-weight:700; }
+  .hero-points li{ display:flex; align-items:center; gap:7px; }
+  .hero-points li::before{ content:"✓"; color:var(--green); font-weight:900; }
+  .hero-photo{ position:relative; }
+  .hero-photo img{ width:100%; height:100%; min-height:300px; object-fit:cover; border-radius:20px; box-shadow:var(--shadow); }
+  .hero-photo figcaption{
+    position:absolute; left:14px; bottom:14px;
+    background:rgba(30,18,10,.78); color:#fdf6ea; font-size:12.5px; font-weight:700;
+    padding:7px 13px; border-radius:999px; backdrop-filter:blur(4px);
+  }
+
+  .pr-bar{
+    margin-top:34px; background:var(--surface); border:1px solid var(--line); border-radius:12px;
+    padding:12px 18px; font-size:13px; color:var(--ink-2);
+    display:flex; gap:10px; align-items:flex-start;
+  }
+  .pr-bar b{ color:var(--crimson); flex:none; border:1.5px solid var(--crimson); border-radius:6px; padding:0 7px; font-size:12px; line-height:1.9; }
+
+  /* Sections */
+  section.block{ padding:56px 0 8px; }
+  .sec-head{ display:flex; align-items:baseline; gap:14px; flex-wrap:wrap; margin-bottom:8px; }
+  .sec-head h2{ font-family:"Shippori Mincho", serif; font-size:clamp(23px,3.6vw,30px); font-weight:800; }
+  .sec-head .en{ font-size:12px; letter-spacing:.18em; color:var(--gold); font-weight:900; }
+  .sec-lead{ color:var(--ink-2); max-width:44em; margin-bottom:26px; }
+
+  /* Pickup cards */
+  .pick-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:18px; }
+  @media (max-width:760px){ .pick-grid{ grid-template-columns:1fr; } }
+  .pick-grid .cat-card .ph{ aspect-ratio:16/10; }
+  .pick-grid .pick-full{ grid-column:1 / -1; }
+  @media (min-width:761px){
+    .pick-grid .pick-full{ flex-direction:row; }
+    .pick-grid .pick-full .ph{ flex:0 0 42%; aspect-ratio:auto; }
+  }
+  .rating{ font-size:13px; font-weight:900; color:var(--gold); }
+  .rating span{ color:var(--ink-3); font-weight:700; }
+
+  /* Category cards */
+  .cat-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+  @media (max-width:900px){ .cat-grid{ grid-template-columns:repeat(2,1fr); } }
+  @media (max-width:560px){ .cat-grid{ grid-template-columns:1fr; } }
+  .cat-card{ background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); overflow:hidden; display:flex; flex-direction:column; }
+  .cat-card .ph{ aspect-ratio:4/3; overflow:hidden; background:var(--bg-soft); }
+  .cat-card .ph img{ width:100%; height:100%; object-fit:cover; }
+  .cat-card .ph.text-ph{ display:grid; place-items:center; background:var(--crimson); }
+  .ph-kanazawa{ text-align:center; color:#fdf3d8; padding:20px; }
+  .ph-kanazawa .big{ font-family:"Shippori Mincho", serif; font-size:34px; font-weight:800; display:block; line-height:1.3; }
+  .ph-kanazawa .small{ font-size:12.5px; letter-spacing:.2em; opacity:.85; }
+  .cat-body{ padding:18px 18px 20px; display:flex; flex-direction:column; gap:8px; flex:1; }
+  .cat-body h3{ font-size:18px; font-weight:900; }
+  .cat-body h3 .sub{ display:block; font-size:12px; color:var(--ink-3); font-weight:700; letter-spacing:.06em; margin-top:2px; }
+  .cat-body p{ font-size:14px; color:var(--ink-2); flex:1; }
+  .cat-meta{ display:flex; gap:6px; flex-wrap:wrap; }
+  .chip{ font-size:11.5px; font-weight:700; background:var(--gold-soft); color:var(--gold); padding:3px 10px; border-radius:999px; }
+  .chip.red{ background:var(--crimson-soft); color:var(--crimson); }
+  .shop-links{ display:grid; grid-template-columns:1fr; gap:8px; margin-top:6px; }
+  .shop-links a{
+    text-align:center; text-decoration:none; font-weight:900; font-size:13.5px;
+    padding:10px 6px; border-radius:10px; border:1px solid var(--line); background:var(--surface-2); color:var(--ink);
+  }
+  .shop-links a:hover{ border-color:var(--gold); }
+  .shop-links a .mall{ display:block; font-size:11px; color:var(--ink-3); font-weight:700; }
+  .pr-note{ font-size:11px; color:var(--ink-3); }
+
+  /* Owner pick */
+  .owner-card{
+    background:var(--surface); border:1px solid var(--line); border-radius:20px; overflow:hidden;
+    box-shadow:var(--shadow); display:grid; grid-template-columns:1fr 1.1fr;
+  }
+  @media (max-width:860px){ .owner-card{ grid-template-columns:1fr; } }
+  .owner-card .ph{ min-height:280px; background:var(--bg-soft); }
+  .owner-card .ph img{ width:100%; height:100%; object-fit:cover; }
+  @media (max-width:860px){ .owner-card .ph img{ aspect-ratio:16/10; } }
+  .owner-body{ padding:28px 30px 30px; display:flex; flex-direction:column; gap:12px; }
+  @media (max-width:560px){ .owner-body{ padding:22px 20px 24px; } }
+  .owner-body h3{ font-family:"Shippori Mincho", serif; font-size:clamp(21px,3vw,26px); font-weight:800; line-height:1.45; }
+  .owner-body h3 .sub{ display:block; font-family:"Zen Kaku Gothic New", sans-serif; font-size:13px; color:var(--ink-3); font-weight:700; letter-spacing:.04em; margin-top:4px; }
+  .owner-body p{ font-size:14.5px; color:var(--ink-2); }
+  .owner-body p b{ color:var(--ink); }
+  .owner-quote{
+    background:var(--surface-2); border-radius:12px; padding:14px 16px;
+    font-family:"Shippori Mincho", serif; font-weight:700; font-size:16px; color:var(--ink); line-height:1.6;
+  }
+  .owner-quote span{ display:block; font-family:"Zen Kaku Gothic New", sans-serif; font-size:12px; font-weight:700; color:var(--ink-3); margin-top:5px; }
+  .owner-spec{ display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+  @media (max-width:480px){ .owner-spec{ grid-template-columns:1fr; } }
+  .owner-spec div{ background:var(--bg-soft); border-radius:10px; padding:11px 14px; }
+  .owner-spec dt{ font-size:11.5px; font-weight:900; color:var(--ink-3); letter-spacing:.06em; }
+  .owner-spec dd{ margin:0; font-size:15px; font-weight:900; }
+  .owner-actions{ display:flex; flex-wrap:wrap; gap:10px; margin-top:4px; }
+  .owner-actions .btn{ flex:1; min-width:210px; justify-content:center; text-align:center; }
+  .btn-map{ background:var(--surface); border-color:var(--line); color:var(--ink); }
+
+  /* Concierge */
+  .concierge{
+    background:var(--surface); border:1px solid var(--line); border-radius:20px; padding:28px;
+    box-shadow:var(--shadow);
+  }
+  @media (max-width:560px){ .concierge{ padding:20px; } }
+  .concierge h3{ font-family:"Shippori Mincho", serif; font-size:21px; font-weight:800; margin-bottom:6px; }
+  .concierge>p{ color:var(--ink-2); font-size:14.5px; margin-bottom:20px; }
+  .c-form{ display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+  @media (max-width:760px){ .c-form{ grid-template-columns:1fr; } }
+  .c-field label{ display:block; font-size:13px; font-weight:900; margin-bottom:7px; }
+  .c-field select{
+    width:100%; font:inherit; font-size:15px; padding:12px 14px; border-radius:10px;
+    border:1px solid var(--line); background:var(--surface-2); color:var(--ink);
+  }
+  .c-result{ margin-top:20px; border-top:1px dashed var(--line); padding-top:18px; display:none; }
+  .c-result.show{ display:block; }
+  .c-result .kw{ font-size:14px; color:var(--ink-2); margin-bottom:12px; }
+  .c-result .kw b{ color:var(--ink); }
+  .c-actions{ display:flex; flex-wrap:wrap; gap:10px; }
+  .c-actions a{ flex:1; min-width:200px; text-align:center; }
+  .btn-rakuten{ background:#bf0000; color:#fff; }
+  .c-tip{ margin-top:14px; font-size:13.5px; color:var(--ink-2); background:var(--bg-soft); border-radius:10px; padding:12px 14px; }
+
+  /* Budget */
+  .budget-tabs{ display:flex; gap:8px; flex-wrap:wrap; margin-bottom:20px; }
+  .budget-tabs button{
+    font:inherit; font-weight:900; font-size:14px; cursor:pointer;
+    padding:9px 18px; border-radius:999px; border:1px solid var(--line);
+    background:var(--surface); color:var(--ink-2);
+  }
+  .budget-tabs button.active{ background:var(--crimson); border-color:var(--crimson); color:#fff; }
+  @media (prefers-color-scheme: dark){ .budget-tabs button.active{ color:#241016; } }
+  .idea-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+  @media (max-width:900px){ .idea-grid{ grid-template-columns:repeat(2,1fr); } }
+  @media (max-width:560px){ .idea-grid{ grid-template-columns:1fr; } }
+  .idea{ background:var(--surface); border:1px solid var(--line); border-radius:14px; padding:18px; display:flex; flex-direction:column; gap:8px; }
+  .idea.hide{ display:none; }
+  .idea .price{ font-family:"Shippori Mincho", serif; font-weight:800; color:var(--crimson); font-size:15px; }
+  .idea h3{ font-size:16.5px; font-weight:900; }
+  .idea p{ font-size:13.5px; color:var(--ink-2); flex:1; }
+  .idea .shop-links{ margin-top:2px; }
+
+  /* Scenes */
+  .scene-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:16px; }
+  @media (max-width:900px){ .scene-grid{ grid-template-columns:repeat(2,1fr); } }
+  @media (max-width:480px){ .scene-grid{ grid-template-columns:1fr; } }
+  .scene{ background:var(--surface-2); border:1px solid var(--line); border-radius:14px; padding:20px 18px; }
+  .scene .when{ font-size:12px; font-weight:900; color:var(--gold); letter-spacing:.08em; }
+  .scene h3{ font-size:17px; font-weight:900; margin:4px 0 8px; }
+  .scene p{ font-size:13.5px; color:var(--ink-2); }
+
+  /* Steps */
+  .steps{ display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+  @media (max-width:760px){ .steps{ grid-template-columns:1fr; } }
+  .step{ background:var(--surface); border:1px solid var(--line); border-radius:14px; padding:22px 20px; }
+  .step .num{
+    width:34px; height:34px; border-radius:50%; background:var(--gold-soft); color:var(--gold);
+    display:grid; place-items:center; font-family:"Shippori Mincho", serif; font-weight:800; margin-bottom:12px;
+  }
+  .step h3{ font-size:16.5px; font-weight:900; margin-bottom:6px; }
+  .step p{ font-size:14px; color:var(--ink-2); }
+  .checklist{ margin-top:18px; background:var(--surface); border:1px solid var(--line); border-radius:14px; padding:20px 22px; }
+  .checklist h3{ font-size:15.5px; font-weight:900; margin-bottom:10px; }
+  .checklist ul{ display:grid; grid-template-columns:1fr 1fr; gap:8px 24px; }
+  @media (max-width:640px){ .checklist ul{ grid-template-columns:1fr; } }
+  .checklist li{ font-size:14px; color:var(--ink-2); padding-left:26px; position:relative; }
+  .checklist li::before{
+    content:"✓"; position:absolute; left:0; top:1px; width:18px; height:18px; border-radius:5px;
+    background:var(--green); color:#fff; font-size:12px; font-weight:900; display:grid; place-items:center; line-height:1;
+  }
+
+  /* TikTok */
+  .tiktok-band{
+    background:var(--crimson-deep); color:#fdf3e3; border-radius:20px; padding:34px 30px;
+    display:grid; grid-template-columns:1.2fr .8fr; gap:26px; align-items:center;
+  }
+  @media (max-width:760px){ .tiktok-band{ grid-template-columns:1fr; padding:26px 22px; } }
+  .tiktok-band h2{ font-family:"Shippori Mincho", serif; font-size:clamp(21px,3.4vw,27px); font-weight:800; color:#fff; margin-bottom:10px; }
+  .tiktok-band p{ font-size:14.5px; color:#f3ddc8; max-width:36em; }
+  .tiktok-card{ background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.22); border-radius:14px; padding:20px; }
+  .tiktok-card .handle{ font-size:20px; font-weight:900; color:#fff; }
+  .tiktok-card .name{ font-size:13px; color:#f3ddc8; margin-bottom:14px; }
+  .tiktok-card a{
+    display:block; text-align:center; background:#fff; color:#6d1424; font-weight:900; text-decoration:none;
+    padding:12px; border-radius:10px; font-size:15px;
+  }
+  .tiktok-card .goal{ font-size:12.5px; color:#f3ddc8; margin-top:12px; text-align:center; }
+
+  /* FAQ */
+  .faq{ display:flex; flex-direction:column; gap:10px; }
+  .faq details{ background:var(--surface); border:1px solid var(--line); border-radius:12px; }
+  .faq summary{ cursor:pointer; font-weight:900; font-size:15.5px; padding:16px 20px; list-style:none; display:flex; justify-content:space-between; gap:12px; align-items:center; }
+  .faq summary::-webkit-details-marker{ display:none; }
+  .faq summary::after{ content:"＋"; color:var(--crimson); font-weight:900; flex:none; }
+  .faq details[open ] summary::after{ content:"−"; }
+  .faq .a{ padding:0 20px 18px; font-size:14.5px; color:var(--ink-2); }
+
+  /* Policy / footer */
+  .policy{ background:var(--bg-soft); border-radius:16px; padding:24px 26px; font-size:14px; color:var(--ink-2); }
+  .policy h3{ color:var(--ink); font-size:16px; font-weight:900; margin-bottom:10px; }
+  .policy ul{ display:flex; flex-direction:column; gap:6px; }
+  .policy li{ padding-left:18px; position:relative; }
+  .policy li::before{ content:"・"; position:absolute; left:2px; color:var(--gold); font-weight:900; }
+  footer.site{ margin-top:64px; border-top:1px solid var(--line); padding:28px 0 40px; }
+  .foot{ display:flex; flex-wrap:wrap; gap:14px 28px; align-items:center; justify-content:space-between; font-size:13px; color:var(--ink-3); }
+  .foot a{ font-weight:700; }
+  .updated{ font-size:12px; }
+</style>
+
+  <style>
+    .rank-h{margin:26px 0 12px;font-size:1.15rem;color:var(--crimson-deep)}
+    .rank-list{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+    @media (max-width:760px){.rank-list{grid-template-columns:1fr}}
+    .rank-item{display:flex;align-items:center;gap:12px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:10px 12px}
+    .rank-no{flex:0 0 auto;width:30px;height:30px;border-radius:50%;background:var(--gold-soft);color:var(--gold);font-weight:700;display:flex;align-items:center;justify-content:center;font-size:.95rem}
+    .rank-ph{flex:0 0 auto;width:64px;height:64px;border-radius:8px;overflow:hidden;background:var(--bg-soft)}
+    .rank-ph img{width:100%;height:100%;object-fit:cover;display:block}
+    .rank-body{flex:1 1 auto;min-width:0}
+    .rank-body h4{margin:0 0 4px;font-size:.98rem;line-height:1.35}
+    .rank-meta{margin:0;font-size:.8rem;color:var(--ink-2)}
+.rank-desc{margin:2px 0 0;font-size:.82rem;color:var(--ink-2);line-height:1.5}
+    .rank-btn{flex:0 0 auto;font-size:.8rem;font-weight:700;color:#fff;border-radius:999px;padding:8px 12px;text-decoration:none;white-space:nowrap}
+    .rank-btn.rk{background:var(--crimson)}
+    .rank-btn.am{background:#b96a1b}
+  </style>
+</head>
+<body>
+<header class="site">
+  <div class="wrap site-inner">
+    <a class="brand" href="index.html#top" aria-label="お取り寄せギフト案内所 Japan Gifts トップへ">
+      <span class="brand-mark" aria-hidden="true">贈</span>
+      <span class="brand-text">
+        <strong>お取り寄せギフト案内所</strong>
+        <span>JAPAN GIFTS</span>
+      </span>
+    </a>
+    <nav class="main" aria-label="ページ内メニュー">
+      <a href="index.html#owner-pick">店主のおすすめ</a>
+      <a href="index.html#pickup">新着ピックアップ</a>
+      <a href="index.html#ranking">ランキング特集</a>
+      <a href="furusato-guide.html">ふるさと納税ガイド</a>
+      <a href="oseibo.html">お歳暮特集</a>
+      <a href="index.html#categories">カテゴリ</a>
+      <a href="index.html#concierge">ギフト検索</a>
+      <a href="index.html#budget">予算で選ぶ</a>
+      <a href="index.html#howto">選び方</a>
+      <a href="index.html#faq">よくある質問</a>
+      <a class="cta" href="https://www.tiktok.com/@socrateskun" target="_blank" rel="noopener">TikTokを見る</a>
+    </nav>
+  </div>
+</header>
+<main>
+<section class="block"><div class="wrap">
+<div class="sec-head"><h2>お歳暮ギフト特集</h2><span class="en">OSEIBO 2026</span></div>
+<p class="sec-lead">お歳暮は、12月上旬から20日ごろまでに届くよう手配するのが目安です。予算の中心は3,000〜5,000円。のしには「御歳暮」と書き、水引は紅白の蝶結びが基本です。喪中の方への年内のお届けは避けるのが一般的とされています。当店の新着から、お歳暮に向く品を選びました。価格・在庫はリンク先で最新をご確認ください。</p>
+<div class="pick-grid">
+<article class="cat-card">
+          <div class="ph"><img src="assets/seiko-gani-10.jpg" alt="訳ありせいこがに10杯の盛り付け" loading="lazy" /></div>
+          <div class="cat-body">
+            <div class="cat-meta">
+              <span class="chip red">楽天市場</span>
+              <span class="chip">海鮮問屋まるうお</span>
+              <span class="chip">冷蔵</span>
+              <span class="chip">10,798円＋送料</span>
+            </div>
+            <h3>訳あり せいこがに 10杯セット（小〜中サイズ）<span class="sub">楽天市場（海鮮問屋まるうお）</span></h3>
+            <p class="rating">★4.44 <span>（レビュー66件・2026年11月20日確認時点）</span></p>
+            <p>ボイルしたせいこがに（越前がにのメス）を10杯詰め合わせた、ご自宅用のセットです（以下は商品ページの案内をもとにした紹介です）。ぷちぷちの外子と濃厚な内子が味わえ、解凍したらそのまま食べられます。価格は10,798円で、送料は本州・四国1,200円、東北・九州1,700円、北海道2,000円、沖縄・離島2,700円です。冷蔵便（クール便・ヤマト運輸）でのお届けで、販売期間は2026年12月25日12:00までと案内されています。楽天市場の越前がにの売れ筋に入っています。</p>
+            <p>注意点も正直に：訳あり品のため、足が1〜2本折れていたりサイズがバラバラだったり甲羅に汚れがあったりするカニが入ります。水揚げ量が少ないため通常よりサイズが小さめで、外子のないカニが混じる場合もあると案内されています。要冷蔵（10℃以下）で、生ものですのでお早めにお召し上がりくださいと案内されており、賞味期限の日数は商品ページに明記がありません。価格の表示に税込の明記がなく、ショップの案内に「当店の商品は全て税抜価格表示です」とあるため、税込価格はリンク先でご確認ください。ページ下部のショップ案内では送料の記載が一部異なります（九州・北海道）。詳細はリンク先でご確認ください。</p>
+            <div class="shop-links">
+              <a href="https://hb.afl.rakuten.co.jp/ichiba/5941b8f4.9742d675.5941b8f5.2abfda65/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fmaruuo%2F879488%2F" target="_blank" rel="noopener sponsored">楽天市場で見る（PR）<span class="mall">海鮮問屋まるうお・訳ありせいこがに 10杯セット</span></a>
+            </div>
+            <span class="pr-note">※ 広告リンク（楽天アフィリエイト）です。価格・内容・送料はリンク先でご確認ください。写真は販売元の商品ページの画像です。</span>
+          </div>
+        </article>
+<article class="cat-card">
+          <div class="ph"><img src="assets/cigare-20.jpg" alt="シガール20本入りの青い缶とロールクッキー" loading="lazy" /></div>
+          <div class="cat-body">
+            <div class="cat-meta">
+              <span class="chip">Amazon</span>
+              <span class="chip">ヨックモック</span>
+              <span class="chip">常温</span>
+              <span class="chip">公式価格 1,998円</span>
+            </div>
+            <h3>シガール 20本入り<span class="sub">Amazon（ヨックモック）</span></h3>
+            <p class="rating">★4.5 <span>（レビュー約12,000件・Amazonの公開記録による）</span></p>
+            <p>バターをふんだんに使った生地をロール状に巻いた、ヨックモックのロングセラー「シガール」20本入りの缶です（以下は商品ページなどの案内をもとにした紹介です）。個包装で、内容量は520g・缶入り181×208×55mmです。公式価格は1,998円（税込）で、Amazonではヨックモックが販売しAmazonが発送すると案内されています。賞味期限は発送日より40日以上と案内されており、お歳暮や手土産の定番として選ばれています。</p>
+            <p>注意点も正直に：Amazonの商品ページは当日ボット対策で開けなかったため、評価はAmazonの公開記録、価格はヨックモック公式サイトの掲載価格をもとに表示しています。Amazonでの販売価格は変動することがあるため、リンク先でご確認ください。割れやすいお菓子のため、配送時の破損に関する声もあると案内されています。賞味期限などの詳細はリンク先でご確認ください。</p>
+            <div class="shop-links">
+              <a href="https://www.amazon.co.jp/dp/B00C6VIA6C?tag=handpank0c-22" target="_blank" rel="noopener sponsored">Amazonで見る（PR）<span class="mall">ヨックモック・シガール 20本入り</span></a>
+            </div>
+            <span class="pr-note">※ 広告リンク（Amazonアソシエイト）です。価格・内容・送料はリンク先でご確認ください。写真は販売元の公式オンラインショップの商品画像です。</span>
+          </div>
+        </article>
+<article class="cat-card">
+          <div class="ph"><img src="assets/kakitane-assort-12.jpg" alt="かきたねキッチンのアソート12袋入りの箱と小袋" loading="lazy" /></div>
+          <div class="cat-body">
+            <div class="cat-meta">
+              <span class="chip red">楽天市場</span>
+              <span class="chip">とよす・かきたねキッチン</span>
+              <span class="chip">常温</span>
+              <span class="chip">1,980円</span>
+            </div>
+            <h3>かきたねキッチン かきたねアソート 12袋入<span class="sub">楽天市場（Rakuten グルメ館／とよす）</span></h3>
+            <p class="rating">★4.73 <span>（レビュー231件・2026年11月20日確認時点）</span></p>
+            <p>柿の種専門店「かきたねキッチン」のアソート12袋入りです（以下は商品ページの案内をもとにした紹介です）。甘醤油のあと辛・贅沢チーズ・海鮮風塩だれの3種が各4袋、計120gです。価格は1,980円（1箱）で、送料無料と案内されています。ブランドショッパー付きで、手土産やお歳暮の贈り物にも選ばれています。</p>
+            <p>注意点も正直に：まとめ買いでは1,980円〜15,000円の価格表示があります。賞味期限は商品ページの仕様欄に記載がなく確認できなかったため、リンク先でご確認ください。Amazonでも販売されていますが、当日はAmazonのページが開けなかったため、楽天市場の商品ページで確認した内容で紹介しています。詳細はリンク先でご確認ください。</p>
+            <div class="shop-links">
+              <a href="https://hb.afl.rakuten.co.jp/ichiba/5941b8f4.9742d675.5941b8f5.2abfda65/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fr-food%2Frf-d-00176%2F" target="_blank" rel="noopener sponsored">楽天市場で見る（PR）<span class="mall">Rakuten グルメ館・かきたねアソート 12袋入</span></a>
+            </div>
+            <span class="pr-note">※ 広告リンク（楽天アフィリエイト）です。価格・内容・送料はリンク先でご確認ください。写真は販売元の商品ページの画像です。</span>
+          </div>
+        </article>
+<article class="cat-card">
+          <div class="ph"><img src="assets/juni-hitoe-mankai.jpg" alt="十二単 満開の箱と12色の包みのお米ギフト" loading="lazy" /></div>
+          <div class="cat-body">
+            <div class="cat-meta">
+              <span class="chip red">楽天市場</span>
+              <span class="chip">京都・八代目儀兵衛</span>
+              <span class="chip">常温</span>
+              <span class="chip">8,000円</span>
+            </div>
+            <h3>十二単 満開（お米2合×12個入り）<span class="sub">楽天市場（八代目儀兵衛）</span></h3>
+            <p class="rating">★4.78 <span>（レビュー10,688件・2026年11月19日確認時点）</span></p>
+            <p>令和8年産新米、12銘柄のお米を2合ずつ小分けにしたお米ギフトです（以下は商品ページの案内をもとにした紹介です）。無洗米・白米で、1袋300g×12個・内容量3,600g（総重量4,100g）。価格は8,000円（税込）、送料無料です。賞味期限は精米年月日より45日間と案内されています。2007年のフォーマルギフト大賞受賞、OMOTENASHI SELECTION金賞受賞と案内されており、お歳暮や内祝いの贈り物として選ばれています。</p>
+            <p>注意点も正直に：お米の銘柄は12種の詰め合わせで、選ぶことはできません。賞味期限は精米から45日間と短めなので、贈る相手の消費ペースにご注意ください。配送情報欄には「送料無料ライン対象外 ※離島・一部地域は追加送料が発生する場合があります」との記載もあります。のし対応などの詳細はリンク先でご確認ください。</p>
+            <div class="shop-links">
+              <a href="https://hb.afl.rakuten.co.jp/ichiba/5941b8f4.9742d675.5941b8f5.2abfda65/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fgihee%2Fjh50%2F" target="_blank" rel="noopener sponsored">楽天市場で見る（PR）<span class="mall">八代目儀兵衛・十二単 満開</span></a>
+            </div>
+            <span class="pr-note">※ 広告リンク（楽天アフィリエイト）です。価格・内容・送料はリンク先でご確認ください。写真は販売元の商品ページの画像です。</span>
+          </div>
+        </article>
+<article class="cat-card">
+          <div class="ph"><img src="assets/beer-yume-no-kyoen.jpg" alt="国産プレミアムビール18本の飲み比べギフトセット" loading="lazy" /></div>
+          <div class="cat-body">
+            <div class="cat-meta">
+              <span class="chip red">楽天市場</span>
+              <span class="chip">ワイン紀行</span>
+              <span class="chip">350ml×18本</span>
+              <span class="chip">5,480円</span>
+            </div>
+            <h3>国産プレミアムビール 飲み比べ 夢の競宴 18本ギフト<span class="sub">楽天市場（ワイン紀行）</span></h3>
+            <p class="rating">★4.69 <span>（レビュー2,021件・2026年11月19日確認時点）</span></p>
+            <p>サッポロ・サントリー・アサヒ・キリンとクラフト・ご当地ビールから、おまかせで詰め合わせた350ml×18本のビールギフトです（以下は商品ページの案内をもとにした紹介です）。価格は5,480円（税込）、送料無料（一部地域を除く）です。お歳暮や贈答向けのギフトセットとして、楽天市場のビールギフトの売れ筋に入っています。</p>
+            <p>注意点も正直に：銘柄はおまかせで、内容の指定はできません。季節や入荷状況により、写真と異なる銘柄が入る場合があります。沖縄・一部離島は追加送料700円がかかります。賞味期限は商品ページのテキストに記載がなく確認できなかったため、リンク先でご確認ください。お酒のため、20歳未満の方への贈り物には使えません。</p>
+            <div class="shop-links">
+              <a href="https://hb.afl.rakuten.co.jp/ichiba/5941b8f4.9742d675.5941b8f5.2abfda65/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fichiishop%2F1423353%2F" target="_blank" rel="noopener sponsored">楽天市場で見る（PR）<span class="mall">ワイン紀行・夢の競宴 18本ギフト</span></a>
+            </div>
+            <span class="pr-note">※ 広告リンク（楽天アフィリエイト）です。価格・内容・送料はリンク先でご確認ください。写真は販売元の商品ページの画像です。</span>
+          </div>
+        </article>
+<article class="cat-card">
+          <div class="ph"><img src="assets/mukiebi-blacktiger.jpg" alt="大型むきえびの盛り付け" loading="lazy" /></div>
+          <div class="cat-body">
+            <div class="cat-meta">
+              <span class="chip red">ふるさと納税</span>
+              <span class="chip">福井県敦賀市</span>
+              <span class="chip">冷凍</span>
+              <span class="chip">寄附額 7,000円〜</span>
+            </div>
+            <h3>背ワタなし 高級ブラックタイガー 大型むきえび 300g〜5kg<span class="sub">楽天ふるさと納税（福井県敦賀市）／ 甲羅組</span></h3>
+            <p class="rating">★4.66 <span>（レビュー6,218件・2026年11月19日確認時点）</span></p>
+            <p>背ワタなしの大型ブラックタイガーのむきえびです（以下は商品ページの案内をもとにした紹介です）。300g〜5kgから選べ、1kgは解凍後約800g・約40〜70尾です。寄附額は7,000円〜144,000円で、1kg×1袋は12,000円、送料無料です。選べる配送月・着日指定ができ、最短当日発送と案内されています。楽天ショップ・オブ・ザ・イヤー2024で総合賞グランプリを受賞した甲羅組の返礼品です。</p>
+            <p>注意点も正直に：加熱用のため、生食での利用はご遠慮くださいと商品ページに明記されています。消費期限は商品ページのテキストに記載がなく確認できなかったため、リンク先でご確認ください。2026年分の控除の対象は12月31日までの決済完了分です。詳細はリンク先でご確認ください。</p>
+            <div class="shop-links">
+              <a href="https://hb.afl.rakuten.co.jp/ichiba/5941b8f4.9742d675.5941b8f5.2abfda65/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff182028-tsuruga%2F59410392%2F" target="_blank" rel="noopener sponsored">楽天ふるさと納税で見る（PR）<span class="mall">福井県敦賀市・甲羅組 大型むきえび</span></a>
+            </div>
+            <span class="pr-note">※ 広告リンク（楽天アフィリエイト）です。寄附額・内容量・受付状況はリンク先でご確認ください。写真は販売元の商品ページの画像です。</span>
+          </div>
+        </article>
+</div>
+<p style="margin-top:18px"><a class="btn btn-primary" href="index.html#pickup">新着ピックアップをすべて見る</a>　<a class="btn" href="index.html#budget">予算で選ぶ</a></p>
+</div></section>
+<section class="block"><div class="wrap"><p>このページには楽天アフィリエイトとAmazonアソシエイトの広告が含まれます。リンク先で商品を購入されると、運営者に紹介料が入る場合があります。価格や在庫は変動するため、購入前にリンク先の表示をご確認ください。当サイトは、Amazon.co.jpを宣伝しリンクすることによってサイトが紹介料を獲得できる手段を提供することを目的に設定されたアフィリエイトプログラムである、Amazonアソシエイト・プログラムの参加者です。</p></div></section>
+</main>
+<footer class="site">
+  <div class="wrap foot">
+    <span>お取り寄せギフト案内所 Japan Gifts</span>
+    <span><a href="https://www.tiktok.com/@socrateskun" target="_blank" rel="noopener">TikTok @socrateskun</a> ／ Japanese gourmet gifts, honestly reviewed.</span>
+    <span class="updated">最終更新：2026年11月21日</span>
+  </div>
+</footer>
+<script data-goatcounter="https://japangifts.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
