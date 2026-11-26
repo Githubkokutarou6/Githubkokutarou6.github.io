@@ -228,6 +228,15 @@
   .c-result.show{ display:block; }
   .c-result .kw{ font-size:14px; color:var(--ink-2); margin-bottom:12px; }
   .c-result .kw b{ color:var(--ink); }
+  .pick-list{ margin:2px 0 14px; }
+  .pick-head{ font-weight:700; font-size:14.5px; color:var(--ink); margin-bottom:8px; }
+  .pick{ display:flex; align-items:center; gap:10px; padding:8px; border:1px solid var(--line); border-radius:12px; margin-bottom:8px; text-decoration:none; background:#fff; }
+  .pick img{ width:56px; height:56px; object-fit:cover; border-radius:8px; flex:none; }
+  .pick-tx{ flex:1; display:flex; flex-direction:column; gap:2px; }
+  .pick-tx b{ color:#222; font-size:14.5px; line-height:1.35; }
+  .pick-tx small{ color:#666; font-size:12px; line-height:1.4; }
+  .pick-go{ color:#c0392b; font-weight:700; font-size:13px; flex:none; }
+
   .c-actions{ display:flex; flex-wrap:wrap; gap:10px; }
   .c-actions a{ flex:1; min-width:200px; text-align:center; }
   .btn-rakuten{ background:#bf0000; color:#fff; }
@@ -1956,7 +1965,7 @@
   <section class="block" id="concierge">
     <div class="wrap">
       <div class="sec-head"><h2>ギフト検索コンシェルジュ</h2><span class="en">GIFT FINDER</span></div>
-      <p class="sec-lead">「誰に・いくらで・何系を」が決まれば、探すのは簡単です。3つ選ぶと、条件に合ったキーワードで楽天市場を検索できます。</p>
+      <p class="sec-lead">「誰に・いくらで・何系を」が決まれば、探すのは簡単です。3つ選ぶと、条件に合うおすすめ商品（ふるさと納税の人気品）と、楽天市場の検索キーワードをご案内します。</p>
 
       <div class="concierge">
         <h3>3つの質問で、探し方をご案内します</h3>
@@ -2000,6 +2009,7 @@
         </div>
         <div class="c-result" id="findResult" aria-live="polite">
           <p class="kw">検索キーワード：<b id="kwText"></b></p>
+          <div class="pick-list" id="pickList"></div>
           <div class="c-actions">
             <a class="btn btn-rakuten" id="rktLink" href="#" target="_blank" rel="noopener sponsored">楽天市場で探す（PR）</a>
           </div>
@@ -2286,6 +2296,16 @@
     family: '家族で囲むなら量と満足感を重視。すき焼きセットや蟹は、年末の食卓そのものが贈り物になります。',
     self: '自分へのご褒美こそ、正直な口コミチェックを。「悪い点」のレビューを読んでから決めると失敗が減ります。'
   };
+  var PICKS = {"seafood": [{"n": "訳ありホタテ 選び放題", "m": "北海道別海町 ・ 寄附額 8,500円〜 ・ ★4.84（31,585件）", "img": "assets/rank-r01.jpg", "url": "https://hb.afl.rakuten.co.jp/ichiba/5941b8f4.9742d675.5941b8f5.2abfda65/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff016918-betsukai%2Fbe018-0054%2F"}, {"n": "いくら醤油漬け", "m": "北海道白糠町 ・ 寄附額 16,000円〜 ・ ★4.76（11,974件）", "img": "assets/ikura.jpg", "url": "https://hb.afl.rakuten.co.jp/ichiba/5941b8f4.9742d675.5941b8f5.2abfda65/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff016683-shiranuka%2F8700-30009172%2F"}, {"n": "甲羅組 ズワイガニ（生食OK）", "m": "福井県敦賀市 ・ 寄附額 11,000円〜 ・ ★4.38（2,430件）", "img": "assets/rank-r06.jpg", "url": "https://hb.afl.rakuten.co.jp/ichiba/5941b8f4.9742d675.5941b8f5.2abfda65/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff182028-tsuruga%2F59410445%2F"}], "meat": [{"n": "宮崎牛 選べる部位＆カット", "m": "宮崎県都城市 ・ 寄附額 14,000円〜 ・ ★4.64（6,769件）", "img": "assets/miyazaki-beef.jpg", "url": "https://hb.afl.rakuten.co.jp/ichiba/5941b8f4.9742d675.5941b8f5.2abfda65/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff452025-miyakonojo%2Fsku-n203%2F"}, {"n": "やわらか牛タン", "m": "北海道別海町 ・ 寄附額 7,000円〜 ・ ★4.54（4,787件）", "img": "assets/rank-r09.jpg", "url": "https://hb.afl.rakuten.co.jp/ichiba/5941b8f4.9742d675.5941b8f5.2abfda65/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff016918-betsukai%2Fns0000020%2F"}, {"n": "九州産黒毛和牛 合挽ハンバーグ 140g×12個", "m": "佐賀県唐津市 ・ 寄附額 11,000円 ・ ★4.5", "img": "assets/rank-a04.jpg", "url": "https://www.amazon.co.jp/dp/B0DNZDS5J4?tag=handpank0c-22"}], "fruit": [{"n": "有田みかん「未来への虹」", "m": "和歌山県有田市 ・ 寄附額 10,000円〜 ・ ★4.30（2,586件）", "img": "assets/rank-r07.jpg", "url": "https://hb.afl.rakuten.co.jp/ichiba/5941b8f4.9742d675.5941b8f5.2abfda65/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff302040-arida%2F03%2F"}, {"n": "厳選シャインマスカット 1.2kg（2027年発送・先行予約）", "m": "山梨県富士吉田市 ・ 寄附額 10,000円 ・ ★4.6", "img": "assets/rank-a08.jpg", "url": "https://www.amazon.co.jp/dp/B0DMLJDJG6?tag=handpank0c-22"}], "sweets": [{"n": "ルタオ ドゥーブルフロマージュ 食べ比べセット", "m": "北海道千歳市 ・ 寄附額 19,000円〜 ・ ★4.86（2,374件）", "img": "assets/sw01.jpg", "url": "https://hb.afl.rakuten.co.jp/ichiba/5941b8f4.9742d675.5941b8f5.2abfda65/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff012246-chitose%2Fqe048-r%2F"}, {"n": "ROYCE' 人気スイーツ詰合せ Aセット", "m": "北海道当別町 ・ 寄附額 19,500円〜 ・ ★4.40（923件）", "img": "assets/sw02.jpg", "url": "https://hb.afl.rakuten.co.jp/ichiba/5941b8f4.9742d675.5941b8f5.2abfda65/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff013030-tobetsu%2F10000010%2F"}, {"n": "鳩サブレー", "m": "神奈川県鎌倉市 ・ 寄附額 10,000円〜 ・ ★4.57（170件）", "img": "assets/sw10.jpg", "url": "https://hb.afl.rakuten.co.jp/ichiba/5941b8f4.9742d675.5941b8f5.2abfda65/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff142042-kamakura%2Fah05%2F"}], "wagashi": [{"n": "仁々木 祇園ぽっちり", "m": "京都府京都市 ・ 寄附額 7,000円〜 ・ ★4.74（2,863件）", "img": "assets/sw03.jpg", "url": "https://hb.afl.rakuten.co.jp/ichiba/5941b8f4.9742d675.5941b8f5.2abfda65/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff261009-kyoto%2Fb-td01%2F"}, {"n": "鳩サブレー", "m": "神奈川県鎌倉市 ・ 寄附額 10,000円〜 ・ ★4.57（170件）", "img": "assets/sw10.jpg", "url": "https://hb.afl.rakuten.co.jp/ichiba/5941b8f4.9742d675.5941b8f5.2abfda65/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff142042-kamakura%2Fah05%2F"}, {"n": "干し芋 紅はるか（無添加・国産）", "m": "鹿児島県大崎町 ・ 寄附額 4,000円〜 ・ ★4.58（533件）", "img": "assets/sw08.jpg", "url": "https://hb.afl.rakuten.co.jp/ichiba/5941b8f4.9742d675.5941b8f5.2abfda65/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff464686-osaki%2Fb603-r%2F"}], "any": [{"n": "訳ありホタテ 選び放題", "m": "北海道別海町 ・ 寄附額 8,500円〜 ・ ★4.84（31,585件）", "img": "assets/rank-r01.jpg", "url": "https://hb.afl.rakuten.co.jp/ichiba/5941b8f4.9742d675.5941b8f5.2abfda65/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff016918-betsukai%2Fbe018-0054%2F"}, {"n": "いくら醤油漬け", "m": "北海道白糠町 ・ 寄附額 16,000円〜 ・ ★4.76（11,974件）", "img": "assets/ikura.jpg", "url": "https://hb.afl.rakuten.co.jp/ichiba/5941b8f4.9742d675.5941b8f5.2abfda65/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff016683-shiranuka%2F8700-30009172%2F"}, {"n": "エンペラーサーモン", "m": "北海道白糠町 ・ 寄附額 11,000円〜 ・ ★4.70（8,572件）", "img": "assets/salmon.jpg", "url": "https://hb.afl.rakuten.co.jp/ichiba/5941b8f4.9742d675.5941b8f5.2abfda65/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff016683-shiranuka%2F8700-30009066%2F"}]};
+  function renderPicks(kind){
+    var key = (kind === 'ranking') ? 'any' : (kind === 'sweetsrank') ? 'sweets' : kind;
+    var items = PICKS[key] || PICKS.any;
+    var html = '<p class="pick-head">この条件のおすすめ</p>';
+    items.forEach(function(p){
+      html += '<a class="pick" href="' + p.url + '" target="_blank" rel="noopener sponsored"><img src="' + p.img + '" alt="" loading="lazy"><span class="pick-tx"><b>' + p.n + '</b><small>' + p.m + '</small></span><span class="pick-go">見る</span></a>';
+    });
+    document.getElementById('pickList').innerHTML = html;
+  }
   var btn = document.getElementById('findBtn');
   btn.addEventListener('click', function(){
     var who = document.getElementById('fWho').value;
@@ -2313,6 +2333,7 @@
       rkt.textContent = '楽天市場で探す（PR）';
       document.getElementById('tipText').textContent = '案内所からのひとこと：' + tips[who];
     }
+    renderPicks(kind);
     var res = document.getElementById('findResult');
     res.classList.add('show');
     res.scrollIntoView({ behavior:'smooth', block:'nearest' });
